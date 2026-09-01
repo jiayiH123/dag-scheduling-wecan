@@ -1,0 +1,112 @@
+{
+  "phase": "Phase 1 acceptance freeze",
+  "git_commit": "08dcbc39d437797e9531706780d71c5c82fea9e7",
+  "git_commit_subject": "complete phase16 fixed-set diagnostic",
+  "environment": {
+    "python": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+    "platform": "Linux-5.4.0-139-generic-x86_64-with-glibc2.39",
+    "torch": "2.7.0a0+ecf3bae40a.nv25.2",
+    "numpy": "1.26.4",
+    "PyYAML": "6.0.2",
+    "PuLP": "3.0.0",
+    "pytest": "8.1.1"
+  },
+  "phase16_training_config": {
+    "seed": 2026,
+    "profile": "smoke",
+    "baseline": "instance_leave_one_out",
+    "rollouts_per_instance": 8,
+    "batch_size": 8,
+    "max_updates": 300,
+    "validation_cadence_updates": 20,
+    "best_update": 179,
+    "sampler": "family-balanced with replacement; 3/3/2 rotation",
+    "normalized_cost": "makespan / oracle_makespan",
+    "loss": "instance-equal normalized LOO REINFORCE"
+  },
+  "data_config_hashes": {
+    "phase16_v1_runtime": "3dece9d1131161e193909f69f8e7497d40f62a9626c0a3ab1584a41f8b6686ec",
+    "phase16_t2_v2_runtime": "754f3e0a82ccf3ec4e9720629519522c95d875f7d6b0fe31c09fbdd2d218b722"
+  },
+  "files": {
+    "train_instances": {
+      "path": "results/phase16_final/train_instances.json",
+      "sha256": "c512657ac300ff66093cf7846679f12055554776866d030de0575fd03136b200",
+      "bytes": 25380
+    },
+    "validation_instances": {
+      "path": "results/phase16_final/validation_instances.json",
+      "sha256": "4a2dcdcab78aad5449647c3f84e7bbe4e150859823fa4dd8894143be9d69fc67",
+      "bytes": 12692
+    },
+    "test_instances": {
+      "path": "results/phase16_final/test_instances.json",
+      "sha256": "1c1be501b123dde84a57549918d9464590217e92c4b534ea1c5eff40f4ace73a",
+      "bytes": 32376
+    },
+    "selected_manifest": {
+      "path": "results/phase16_final/selected_manifest.json",
+      "sha256": "dee672aeec444e563ca76524c8eeec39d1a84457dd16e054fa7d2e8ec1309af6",
+      "bytes": 110523
+    },
+    "oracle_audit": {
+      "path": "results/phase16_final/oracle_audit.jsonl",
+      "sha256": "3ca27c6bb50ebc2bf6948bc2f23993a70d60be0586337396f3b6150b924469d3",
+      "bytes": 509574
+    },
+    "initial_checkpoint": {
+      "path": "results/phase16_train_seed2026/checkpoint/initial.pt",
+      "sha256": "f01f09f0b18e90d13d0947acb17e08ac16693ae91eceb37caae62dfdbe1dcc24",
+      "bytes": 638815
+    },
+    "best_checkpoint": {
+      "path": "results/phase16_train_seed2026/checkpoint/best.pt",
+      "sha256": "d0955a484e042b4e2ab36c8f7c824cfa6054142d9fb585e70b027e9de05f2f98",
+      "bytes": 1910178
+    },
+    "last_checkpoint": {
+      "path": "results/phase16_train_seed2026/checkpoint/last.pt",
+      "sha256": "2067ef99092b806d65fc3ef7db25778591de9bf63b31a1e4b98b6e5816884159",
+      "bytes": 1910178
+    },
+    "training_history": {
+      "path": "results/phase16_train_seed2026/history.json",
+      "sha256": "e0c9e4057462d384b58fcf241f100c02a45b8d54d33dd4347c1b54db8fcd3686",
+      "bytes": 717245
+    },
+    "validation_history": {
+      "path": "results/phase16_train_seed2026/validation_history.json",
+      "sha256": "d374b35a82105cea665007633e2d1d92d1ab603714613cc96b5ec241dfac27ef",
+      "bytes": 7923
+    },
+    "test_evaluations": {
+      "path": "results/phase16_train_seed2026/test_evaluations.json",
+      "sha256": "c09194999a64b608d05de61d58204a8c7a18c961a385be5f0b65f75c1aa536d4",
+      "bytes": 208941
+    },
+    "phase16_data_config": {
+      "path": "configs/phase16_fixed_set.yaml",
+      "sha256": "48d01f6fb3d53c5d86f9ed34e515bd9c792eec21a68a2dc1f60f4307c31acfb6",
+      "bytes": 1640
+    },
+    "phase16_v2_config": {
+      "path": "configs/phase16_t2_supplement_v2.yaml",
+      "sha256": "6d68000807e3b1cbfbd305235ce2d5e884da7e6500bb3803e832af054103cee3",
+      "bytes": 4080
+    }
+  },
+  "checkpoint_selection": {
+    "test_evaluated_after_checkpoint_lock": true,
+    "test_checkpoint_states": [
+      "initial",
+      "best-validation",
+      "last"
+    ]
+  },
+  "key_result_paths": {
+    "phase16_data_report": "docs/phase16_data_report.md",
+    "phase16_training_report": "docs/phase16_train_report.md",
+    "dry_run_report": "results/phase16_train_dryrun/dry_run_report.json",
+    "final_generation_summary": "results/phase16_final/final_generation_summary.json"
+  }
+}

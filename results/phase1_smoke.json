@@ -1,0 +1,54 @@
+[
+  {
+    "algorithm": "random",
+    "instances": 12,
+    "feasible_rate": 1.0,
+    "makespan_mean": 140.80056694602976,
+    "makespan_std": 28.167804908023186,
+    "forward_seconds_mean": 0.0,
+    "generation_seconds_mean": 0.015095792594365776,
+    "total_seconds_mean": 0.015095792594365776,
+    "improvement_vs_greedy_mean": -0.2560659057473082,
+    "win_rate_vs_greedy": 0.0,
+    "improvement_vs_heft_mean": -0.25993051947130436
+  },
+  {
+    "algorithm": "greedy",
+    "instances": 12,
+    "feasible_rate": 1.0,
+    "makespan_mean": 114.07475897850169,
+    "makespan_std": 29.34476134135276,
+    "forward_seconds_mean": 0.0,
+    "generation_seconds_mean": 0.015195820267157009,
+    "total_seconds_mean": 0.015195820267157009,
+    "improvement_vs_greedy_mean": 0.0,
+    "win_rate_vs_greedy": 0.0,
+    "improvement_vs_heft_mean": -0.002887681404717323
+  },
+  {
+    "algorithm": "heft",
+    "instances": 12,
+    "feasible_rate": 1.0,
+    "makespan_mean": 113.74056534280844,
+    "makespan_std": 29.29415682584052,
+    "forward_seconds_mean": 0.0,
+    "generation_seconds_mean": 0.0013087887006501357,
+    "total_seconds_mean": 0.0013087887006501357,
+    "improvement_vs_greedy_mean": 0.002800165563156119,
+    "win_rate_vs_greedy": 0.16666666666666666,
+    "improvement_vs_heft_mean": 0.0
+  },
+  {
+    "algorithm": "wecan_greedy",
+    "instances": 12,
+    "feasible_rate": 1.0,
+    "makespan_mean": 123.60834598807834,
+    "makespan_std": 31.226797181114677,
+    "forward_seconds_mean": 0.8729539531438301,
+    "generation_seconds_mean": 0.013439582272743186,
+    "total_seconds_mean": 0.8863935354165733,
+    "improvement_vs_greedy_mean": -0.08584510130942513,
+    "win_rate_vs_greedy": 0.0,
+    "improvement_vs_heft_mean": -0.08903502709017387
+  }
+]

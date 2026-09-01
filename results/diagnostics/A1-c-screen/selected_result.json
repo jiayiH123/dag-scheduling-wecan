@@ -1,0 +1,751 @@
+{
+  "fixture": "a1c_active_wait_six_task",
+  "instance": {
+    "name": "a1c_active_wait_six_task",
+    "task_durations": [
+      1.0,
+      10.0,
+      1.0,
+      10.0,
+      1.0,
+      1.0
+    ],
+    "task_demands": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "pool_capacities": [
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    "compatibility": [
+      [
+        1.0
+      ],
+      [
+        1.0
+      ],
+      [
+        1.0
+      ],
+      [
+        1.0
+      ],
+      [
+        1.0
+      ],
+      [
+        1.0
+      ]
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        3,
+        5
+      ]
+    ]
+  },
+  "construction_rationale": "At t=0 the root consumes y while an independent long x blocker is feasible. A no-wait policy starts the blocker and delays the critical x child; active waiting until the root completes allows that child first, then overlaps blocker and the long y descendant. The x/y dependent tails preserve the strict makespan gap.",
+  "milp": {
+    "status": "optimal",
+    "makespan": 13.0,
+    "schedule": {
+      "makespan": 13.0,
+      "placements": [
+        {
+          "task": 0,
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0
+        },
+        {
+          "task": 1,
+          "pool": 0,
+          "start": 2.0,
+          "end": 12.0
+        },
+        {
+          "task": 2,
+          "pool": 0,
+          "start": 1.0,
+          "end": 2.0
+        },
+        {
+          "task": 3,
+          "pool": 0,
+          "start": 2.0,
+          "end": 12.0
+        },
+        {
+          "task": 4,
+          "pool": 0,
+          "start": 12.0,
+          "end": 13.0
+        },
+        {
+          "task": 5,
+          "pool": 0,
+          "start": 12.0,
+          "end": 13.0
+        }
+      ]
+    },
+    "time_scale": 1,
+    "wall_seconds": 0.04023373988457024,
+    "validator": {
+      "feasible": true,
+      "violations": [],
+      "interval_usages": [
+        {
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            0.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 1.0,
+          "end": 2.0,
+          "usage": [
+            1.0,
+            0.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 2.0,
+          "end": 12.0,
+          "usage": [
+            1.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 12.0,
+          "end": 13.0,
+          "usage": [
+            1.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "trace_checked": false
+    },
+    "detail": {
+      "pulp_status": "Optimal",
+      "horizon_ticks": 24,
+      "time_scale": 1,
+      "log_path": "/tmp/phase15_cbc_v2i13gli/a1c_active_wait_six_task.cbc.log",
+      "cbc_audit": {
+        "proven_optimal": true,
+        "time_limit_reached": false,
+        "node_limit_reached": false,
+        "solution_limit_reached": false,
+        "abnormal_termination": false,
+        "incumbent": 13.0,
+        "best_bound": null,
+        "gap": null,
+        "gap_ok": true,
+        "bound_ok": true,
+        "log_present": true,
+        "pulp_status": "Optimal"
+      },
+      "serial_upper_bound_ticks": 24,
+      "objective_ticks": 13.0,
+      "recovered_assignment": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    }
+  },
+  "exhaustive_with_wait": {
+    "status": "optimal",
+    "makespan": 13.0,
+    "schedule": {
+      "makespan": 13.0,
+      "placements": [
+        {
+          "task": 0,
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0
+        },
+        {
+          "task": 1,
+          "pool": 0,
+          "start": 2.0,
+          "end": 12.0
+        },
+        {
+          "task": 2,
+          "pool": 0,
+          "start": 1.0,
+          "end": 2.0
+        },
+        {
+          "task": 3,
+          "pool": 0,
+          "start": 2.0,
+          "end": 12.0
+        },
+        {
+          "task": 4,
+          "pool": 0,
+          "start": 12.0,
+          "end": 13.0
+        },
+        {
+          "task": 5,
+          "pool": 0,
+          "start": 12.0,
+          "end": 13.0
+        }
+      ]
+    },
+    "time_scale": 1,
+    "wall_seconds": 0.002109985100105405,
+    "validator": {
+      "feasible": true,
+      "violations": [],
+      "interval_usages": [
+        {
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            0.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 1.0,
+          "end": 2.0,
+          "usage": [
+            1.0,
+            0.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 2.0,
+          "end": 12.0,
+          "usage": [
+            1.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 12.0,
+          "end": 13.0,
+          "usage": [
+            1.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "trace_checked": true
+    },
+    "detail": {
+      "search_nodes": 70,
+      "pruned_nodes": 19,
+      "complete_search": true,
+      "unique_canonical_states": 46,
+      "allow_active_wait": true,
+      "history": [
+        "dispatch:0:0",
+        "skip",
+        "dispatch:2:0",
+        "skip",
+        "dispatch:1:0",
+        "dispatch:3:0",
+        "skip",
+        "dispatch:4:0",
+        "dispatch:5:0"
+      ],
+      "active_wait_indices": [
+        1
+      ],
+      "contains_active_wait": true,
+      "assignment": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    }
+  },
+  "exhaustive_without_wait": {
+    "status": "optimal",
+    "makespan": 22.0,
+    "schedule": {
+      "makespan": 22.0,
+      "placements": [
+        {
+          "task": 0,
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0
+        },
+        {
+          "task": 1,
+          "pool": 0,
+          "start": 0.0,
+          "end": 10.0
+        },
+        {
+          "task": 2,
+          "pool": 0,
+          "start": 10.0,
+          "end": 11.0
+        },
+        {
+          "task": 3,
+          "pool": 0,
+          "start": 11.0,
+          "end": 21.0
+        },
+        {
+          "task": 4,
+          "pool": 0,
+          "start": 11.0,
+          "end": 12.0
+        },
+        {
+          "task": 5,
+          "pool": 0,
+          "start": 21.0,
+          "end": 22.0
+        }
+      ]
+    },
+    "time_scale": 1,
+    "wall_seconds": 0.0007952509913593531,
+    "validator": {
+      "feasible": true,
+      "violations": [],
+      "interval_usages": [
+        {
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            1.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 1.0,
+          "end": 10.0,
+          "usage": [
+            1.0,
+            0.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 10.0,
+          "end": 11.0,
+          "usage": [
+            1.0,
+            0.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 11.0,
+          "end": 12.0,
+          "usage": [
+            1.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 12.0,
+          "end": 21.0,
+          "usage": [
+            0.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 21.0,
+          "end": 22.0,
+          "usage": [
+            0.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "trace_checked": true
+    },
+    "detail": {
+      "search_nodes": 22,
+      "pruned_nodes": 3,
+      "complete_search": true,
+      "unique_canonical_states": 18,
+      "allow_active_wait": false,
+      "history": [
+        "dispatch:0:0",
+        "dispatch:1:0",
+        "skip",
+        "skip",
+        "dispatch:2:0",
+        "skip",
+        "dispatch:3:0",
+        "dispatch:4:0",
+        "skip",
+        "skip",
+        "dispatch:5:0"
+      ],
+      "active_wait_indices": [],
+      "contains_active_wait": false,
+      "assignment": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    }
+  },
+  "external_greedy": {
+    "schedule": {
+      "makespan": 22.0,
+      "placements": [
+        {
+          "task": 0,
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0
+        },
+        {
+          "task": 1,
+          "pool": 0,
+          "start": 0.0,
+          "end": 10.0
+        },
+        {
+          "task": 2,
+          "pool": 0,
+          "start": 10.0,
+          "end": 11.0
+        },
+        {
+          "task": 3,
+          "pool": 0,
+          "start": 11.0,
+          "end": 21.0
+        },
+        {
+          "task": 4,
+          "pool": 0,
+          "start": 11.0,
+          "end": 12.0
+        },
+        {
+          "task": 5,
+          "pool": 0,
+          "start": 21.0,
+          "end": 22.0
+        }
+      ]
+    },
+    "validator": {
+      "feasible": true,
+      "violations": [],
+      "interval_usages": [
+        {
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            1.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 1.0,
+          "end": 10.0,
+          "usage": [
+            1.0,
+            0.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 10.0,
+          "end": 11.0,
+          "usage": [
+            1.0,
+            0.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 11.0,
+          "end": 12.0,
+          "usage": [
+            1.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 12.0,
+          "end": 21.0,
+          "usage": [
+            0.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 21.0,
+          "end": 22.0,
+          "usage": [
+            0.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "trace_checked": false
+    }
+  },
+  "ca_heft": {
+    "schedule": {
+      "makespan": 13.0,
+      "placements": [
+        {
+          "task": 0,
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0
+        },
+        {
+          "task": 1,
+          "pool": 0,
+          "start": 2.0,
+          "end": 12.0
+        },
+        {
+          "task": 2,
+          "pool": 0,
+          "start": 1.0,
+          "end": 2.0
+        },
+        {
+          "task": 3,
+          "pool": 0,
+          "start": 2.0,
+          "end": 12.0
+        },
+        {
+          "task": 4,
+          "pool": 0,
+          "start": 12.0,
+          "end": 13.0
+        },
+        {
+          "task": 5,
+          "pool": 0,
+          "start": 12.0,
+          "end": 13.0
+        }
+      ]
+    },
+    "validator": {
+      "feasible": true,
+      "violations": [],
+      "interval_usages": [
+        {
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            0.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 1.0,
+          "end": 2.0,
+          "usage": [
+            1.0,
+            0.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 2.0,
+          "end": 12.0,
+          "usage": [
+            1.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 12.0,
+          "end": 13.0,
+          "usage": [
+            1.0,
+            1.0
+          ],
+          "capacity": [
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "trace_checked": false
+    }
+  },
+  "accepted": true,
+  "rejection_reasons": []
+}

@@ -1,0 +1,43 @@
+{
+  "training": {
+    "best_update": 179,
+    "sampling": {
+      "sampling_with_replacement": true,
+      "family_sample_counts": {
+        "F1": 800,
+        "F2": 800,
+        "F3": 800
+      },
+      "instance_sample_counts": {
+        "f1-m0-seed-5000": 84,
+        "f1-m0-seed-5001": 101,
+        "f1-m0-seed-5002": 88,
+        "f1-m1-seed-5027": 97,
+        "f1-m1-seed-5028": 108,
+        "f1-m1-seed-5029": 101,
+        "f1-m2-seed-5054": 122,
+        "f1-m2-seed-5055": 99,
+        "f2-t0-seed-5200": 95,
+        "f2-t0-seed-5201": 96,
+        "f2-t0-seed-5202": 103,
+        "f2-t0-seed-5203": 97,
+        "f2-t1-seed-5240": 104,
+        "f2-t1-seed-5241": 106,
+        "f2-t1-seed-5242": 94,
+        "f2-t1-seed-5243": 105,
+        "f3-t0-seed-5400": 109,
+        "f3-t0-seed-5401": 90,
+        "f3-t0-seed-5402": 112,
+        "f3-t0-seed-5403": 96,
+        "f3-t1-seed-5440": 97,
+        "f3-t1-seed-5441": 106,
+        "f3-t1-seed-5442": 89,
+        "f3-t1-seed-5443": 101
+      },
+      "min_instance_sample_count": 84,
+      "max_instance_sample_count": 122,
+      "instance_sample_count_range": 38
+    }
+  },
+  "test_evaluations": "test_evaluations.json"
+}

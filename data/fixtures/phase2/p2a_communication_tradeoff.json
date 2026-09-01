@@ -1,0 +1,13 @@
+{
+  "name": "p2a_communication_tradeoff",
+  "task_durations": [4.0, 4.0],
+  "task_demands": [[1.0], [1.0]],
+  "pool_capacities": [[1.0], [1.0]],
+  "compatibility": [[4.0, 1.0], [1.0, 4.0]],
+  "edges": [[0, 1]],
+  "edge_communications": [
+    {"source": 0, "target": 1, "data_size": 10}
+  ],
+  "bandwidth": [[1, 1], [1, 1]],
+  "latency_ticks": [[0, 0], [0, 0]]
+}

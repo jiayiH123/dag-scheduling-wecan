@@ -1,0 +1,16 @@
+{
+  "stage": "A1-b-exact-screen",
+  "screening_only": true,
+  "config_hash": "87d2a192e8b9a49809040feb2735170f2c34290dd332863a445835f4155ee9de",
+  "candidate_count": 100,
+  "greedy_gap_condition_count": 50,
+  "with_wait_equals_without_wait_count": 100,
+  "accepted_count": 50,
+  "rejection_reason_counts": {
+    "external_greedy_absolute_gap_below_2_ticks": 50
+  },
+  "selected_seed": 4002,
+  "selection_reason": "first_accepted_seed_in_4000_to_4099",
+  "stopped_without_selection": false,
+  "audit_path": "results/diagnostics/A1-b-exact-screen/candidates.jsonl"
+}

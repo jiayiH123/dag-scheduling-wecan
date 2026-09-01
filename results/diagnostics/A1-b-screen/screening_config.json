@@ -1,0 +1,22 @@
+{
+  "seed_start": 3000,
+  "seed_end": 3099,
+  "num_tasks_min": 8,
+  "num_tasks_max": 10,
+  "num_pools": 3,
+  "resource_dims": 2,
+  "max_width": 4,
+  "edge_probability": 0.35,
+  "duration_low": 1,
+  "duration_high": 5,
+  "demand_fraction_low": 0.15,
+  "demand_fraction_high": 0.5,
+  "capacity_low": 6,
+  "capacity_high": 12,
+  "incompatibility_probability": 0.15,
+  "compatibility_low": 1,
+  "compatibility_high": 1,
+  "required_relative_greedy_gap": 0.05,
+  "required_absolute_greedy_gap_ticks": 2,
+  "preferred_relative_gap_upper": 0.3
+}

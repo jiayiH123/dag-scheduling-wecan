@@ -1,0 +1,49 @@
+# Python and local tooling
+__pycache__/
+**/__pycache__/
+.pytest_cache/
+*.py[cod]
+*.pyo
+.venv/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Environment and secrets
+.env
+*.env
+.tmp_cfg.json
+
+# Logs and temporary outputs
+*.log
+*.out
+*.tmp
+*.bak
+**/_runs/
+autoreview/cache/
+
+# Editors and notebooks
+.vscode/
+.idea/
+*.swp
+*.swo
+.ipynb_checkpoints/
+
+# Operating-system files
+.DS_Store
+
+# Local agent state and migrated worktrees
+.claude/
+
+# Large/reproducible runtime artifacts
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+results/**/checkpoint/
+results/**/*.pt
+results/**/*.cbc.log
+data/generated/
+data/raw/
+data/sft/

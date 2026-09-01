@@ -1,0 +1,14 @@
+* text=auto
+
+*.py text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf whitespace=-trailing-space
+*.json text eol=lf
+*.jsonl text eol=lf
+
+*.pt binary
+*.png binary
+*.pdf binary
+*.db binary
+
+# Markdown uses intentional two-space hard breaks in historical reports.

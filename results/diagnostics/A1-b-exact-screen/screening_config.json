@@ -1,0 +1,25 @@
+{
+  "name": "a1b_exact_structured_v1",
+  "seed_start": 4000,
+  "seed_end": 4099,
+  "fast_tight_capacity": [
+    7,
+    7
+  ],
+  "slow_loose_capacity": [
+    14,
+    14
+  ],
+  "required_relative_greedy_gap_min": 0.05,
+  "required_relative_greedy_gap_max": 0.3,
+  "required_absolute_greedy_gap_ticks": 2,
+  "task_range": [
+    6,
+    7
+  ],
+  "pools": 2,
+  "resource_dims": 2,
+  "exact_integer_ticks": true,
+  "selection": "first accepted candidate in ascending seed order",
+  "active_wait_rule": "MILP == exhaustive_with_wait == exhaustive_without_wait; without-wait optimum is the no-active-wait witness"
+}

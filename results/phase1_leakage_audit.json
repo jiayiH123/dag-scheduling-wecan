@@ -1,0 +1,87 @@
+{
+  "split_counts": {
+    "train": 24,
+    "validation": 12,
+    "test": 30
+  },
+  "structural_overlap": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "sampler": {
+    "test_names_in_train_split": [],
+    "family_counts_final": {
+      "F1": 800,
+      "F2": 800,
+      "F3": 800
+    },
+    "with_replacement": true
+  },
+  "validation_checkpoint_selection": {
+    "evaluations": 15,
+    "updates": [
+      19,
+      39,
+      59,
+      79,
+      99,
+      119,
+      139,
+      159,
+      179,
+      199,
+      219,
+      239,
+      259,
+      279,
+      299
+    ],
+    "best_update": 179,
+    "test_evaluation_states": [
+      "best",
+      "initial",
+      "last"
+    ],
+    "post_lock_only": true
+  },
+  "oracle_metadata": {
+    "all_manifest_records_have_oracle_audit": true,
+    "model_input_dto_fields": [
+      "name",
+      "task_durations",
+      "task_demands",
+      "pool_capacities",
+      "compatibility",
+      "edges"
+    ],
+    "oracle_fields_not_in_dto": true
+  },
+  "feature_metadata": {
+    "family_template_source_audit_not_in_dto": true,
+    "role_to_final_id_not_in_final_manifest": true
+  },
+  "parameter_updates": {
+    "training_history_updates": 300,
+    "test_evaluation_checkpoint_states": [
+      "best",
+      "initial",
+      "last"
+    ],
+    "test_evaluation_has_optimizer_state": false
+  },
+  "one_forward_k_reuse": {
+    "evaluation_enforced_by_code": true,
+    "rollouts_per_instance": 8,
+    "test_rows_per_state": {
+      "initial": 30,
+      "best": 30,
+      "last": 30
+    }
+  },
+  "trace_feasibility": {
+    "all_test_rows_feasible": true,
+    "all_training_updates_feasible": true,
+    "all_validation_feasible": true
+  }
+}

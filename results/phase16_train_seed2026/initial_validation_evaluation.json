@@ -1,0 +1,1073 @@
+{
+  "rows": [
+    {
+      "instance": "f1-m0-seed-5080",
+      "family": "F1",
+      "template_id": "M0",
+      "source_audit_version": "phase16-v1",
+      "oracle_makespan": 12.0,
+      "external_greedy_makespan": 12.0,
+      "ca_heft_makespan": 12.0,
+      "policy_greedy_makespan": 24.0,
+      "sampled_mean_makespan": 29.375,
+      "best_of_k_makespan": 24.0,
+      "normalized_oracle_gap": 1.0,
+      "sampled_normalized_oracle_gap": 1.4479166666666667,
+      "feasible": true,
+      "trace_valid": true,
+      "best_has_active_wait": true,
+      "best_active_wait_count": 4,
+      "active_wait_ratio": 0.28846153846153844,
+      "passive_time_advance_ratio": 0.17307692307692307,
+      "forward_seconds": 0.02187681896612048,
+      "generation_seconds": 0.02235036692582071,
+      "no_active_wait_policy_greedy_makespan": null,
+      "best_trace": {
+        "decisions": [
+          "dispatch:3:0",
+          "skip",
+          "dispatch:5:1",
+          "skip",
+          "dispatch:4:0",
+          "skip",
+          "dispatch:2:0",
+          "skip",
+          "dispatch:6:1",
+          "skip",
+          "dispatch:0:1",
+          "skip",
+          "dispatch:1:1"
+        ],
+        "placements": [
+          {
+            "task": 0,
+            "pool": 1,
+            "start": 20.0,
+            "end": 22.0
+          },
+          {
+            "task": 1,
+            "pool": 1,
+            "start": 22.0,
+            "end": 24.0
+          },
+          {
+            "task": 2,
+            "pool": 0,
+            "start": 11.0,
+            "end": 16.0
+          },
+          {
+            "task": 3,
+            "pool": 0,
+            "start": 0.0,
+            "end": 4.0
+          },
+          {
+            "task": 4,
+            "pool": 0,
+            "start": 8.0,
+            "end": 11.0
+          },
+          {
+            "task": 5,
+            "pool": 1,
+            "start": 4.0,
+            "end": 8.0
+          },
+          {
+            "task": 6,
+            "pool": 1,
+            "start": 16.0,
+            "end": 20.0
+          }
+        ]
+      }
+    },
+    {
+      "instance": "f1-m0-seed-5081",
+      "family": "F1",
+      "template_id": "M0",
+      "source_audit_version": "phase16-v1",
+      "oracle_makespan": 15.0,
+      "external_greedy_makespan": 15.0,
+      "ca_heft_makespan": 15.0,
+      "policy_greedy_makespan": 28.0,
+      "sampled_mean_makespan": 34.125,
+      "best_of_k_makespan": 28.0,
+      "normalized_oracle_gap": 0.8666666666666667,
+      "sampled_normalized_oracle_gap": 1.275,
+      "feasible": true,
+      "trace_valid": true,
+      "best_has_active_wait": true,
+      "best_active_wait_count": 3,
+      "active_wait_ratio": 0.225,
+      "passive_time_advance_ratio": 0.24166666666666667,
+      "forward_seconds": 0.08928584889508784,
+      "generation_seconds": 0.03374725696630776,
+      "no_active_wait_policy_greedy_makespan": null,
+      "best_trace": {
+        "decisions": [
+          "dispatch:6:0",
+          "skip",
+          "dispatch:0:1",
+          "skip",
+          "dispatch:1:0",
+          "skip",
+          "dispatch:3:0",
+          "skip",
+          "dispatch:7:1",
+          "skip",
+          "dispatch:2:1",
+          "skip",
+          "dispatch:5:1",
+          "skip",
+          "dispatch:4:0"
+        ],
+        "placements": [
+          {
+            "task": 0,
+            "pool": 1,
+            "start": 5.0,
+            "end": 10.0
+          },
+          {
+            "task": 1,
+            "pool": 0,
+            "start": 10.0,
+            "end": 15.0
+          },
+          {
+            "task": 2,
+            "pool": 1,
+            "start": 22.0,
+            "end": 24.0
+          },
+          {
+            "task": 3,
+            "pool": 0,
+            "start": 15.0,
+            "end": 18.0
+          },
+          {
+            "task": 4,
+            "pool": 0,
+            "start": 26.0,
+            "end": 28.0
+          },
+          {
+            "task": 5,
+            "pool": 1,
+            "start": 24.0,
+            "end": 26.0
+          },
+          {
+            "task": 6,
+            "pool": 0,
+            "start": 0.0,
+            "end": 5.0
+          },
+          {
+            "task": 7,
+            "pool": 1,
+            "start": 18.0,
+            "end": 22.0
+          }
+        ]
+      }
+    },
+    {
+      "instance": "f1-m1-seed-5094",
+      "family": "F1",
+      "template_id": "M1",
+      "source_audit_version": "phase16-v1",
+      "oracle_makespan": 10.0,
+      "external_greedy_makespan": 10.0,
+      "ca_heft_makespan": 10.0,
+      "policy_greedy_makespan": 18.0,
+      "sampled_mean_makespan": 21.0,
+      "best_of_k_makespan": 18.0,
+      "normalized_oracle_gap": 0.8,
+      "sampled_normalized_oracle_gap": 1.1,
+      "feasible": true,
+      "trace_valid": true,
+      "best_has_active_wait": true,
+      "best_active_wait_count": 4,
+      "active_wait_ratio": 0.3068181818181818,
+      "passive_time_advance_ratio": 0.14772727272727273,
+      "forward_seconds": 0.00505009014159441,
+      "generation_seconds": 0.020555555121973157,
+      "no_active_wait_policy_greedy_makespan": null,
+      "best_trace": {
+        "decisions": [
+          "dispatch:3:0",
+          "skip",
+          "dispatch:2:1",
+          "skip",
+          "dispatch:0:1",
+          "skip",
+          "dispatch:5:0",
+          "skip",
+          "dispatch:1:1",
+          "skip",
+          "dispatch:4:0"
+        ],
+        "placements": [
+          {
+            "task": 0,
+            "pool": 1,
+            "start": 5.0,
+            "end": 9.0
+          },
+          {
+            "task": 1,
+            "pool": 1,
+            "start": 12.0,
+            "end": 14.0
+          },
+          {
+            "task": 2,
+            "pool": 1,
+            "start": 2.0,
+            "end": 5.0
+          },
+          {
+            "task": 3,
+            "pool": 0,
+            "start": 0.0,
+            "end": 2.0
+          },
+          {
+            "task": 4,
+            "pool": 0,
+            "start": 14.0,
+            "end": 18.0
+          },
+          {
+            "task": 5,
+            "pool": 0,
+            "start": 9.0,
+            "end": 12.0
+          }
+        ]
+      }
+    },
+    {
+      "instance": "f1-m2-seed-5107",
+      "family": "F1",
+      "template_id": "M2",
+      "source_audit_version": "phase16-v1",
+      "oracle_makespan": 14.0,
+      "external_greedy_makespan": 14.0,
+      "ca_heft_makespan": 14.0,
+      "policy_greedy_makespan": 27.0,
+      "sampled_mean_makespan": 32.375,
+      "best_of_k_makespan": 30.0,
+      "normalized_oracle_gap": 0.9285714285714286,
+      "sampled_normalized_oracle_gap": 1.3125,
+      "feasible": true,
+      "trace_valid": true,
+      "best_has_active_wait": true,
+      "best_active_wait_count": 6,
+      "active_wait_ratio": 0.36538461538461536,
+      "passive_time_advance_ratio": 0.09615384615384616,
+      "forward_seconds": 0.09786661597900093,
+      "generation_seconds": 0.024840449914336205,
+      "no_active_wait_policy_greedy_makespan": null,
+      "best_trace": {
+        "decisions": [
+          "dispatch:2:0",
+          "skip",
+          "dispatch:5:0",
+          "skip",
+          "dispatch:6:1",
+          "skip",
+          "dispatch:3:1",
+          "skip",
+          "dispatch:4:0",
+          "skip",
+          "dispatch:1:1",
+          "skip",
+          "dispatch:0:0"
+        ],
+        "placements": [
+          {
+            "task": 0,
+            "pool": 0,
+            "start": 25.0,
+            "end": 30.0
+          },
+          {
+            "task": 1,
+            "pool": 1,
+            "start": 22.0,
+            "end": 25.0
+          },
+          {
+            "task": 2,
+            "pool": 0,
+            "start": 0.0,
+            "end": 3.0
+          },
+          {
+            "task": 3,
+            "pool": 1,
+            "start": 13.0,
+            "end": 18.0
+          },
+          {
+            "task": 4,
+            "pool": 0,
+            "start": 18.0,
+            "end": 22.0
+          },
+          {
+            "task": 5,
+            "pool": 0,
+            "start": 3.0,
+            "end": 9.0
+          },
+          {
+            "task": 6,
+            "pool": 1,
+            "start": 9.0,
+            "end": 13.0
+          }
+        ]
+      }
+    },
+    {
+      "instance": "f2-t0-seed-5282",
+      "family": "F2",
+      "template_id": "T0",
+      "source_audit_version": "phase16-v1",
+      "oracle_makespan": 10.0,
+      "external_greedy_makespan": 12.0,
+      "ca_heft_makespan": 10.0,
+      "policy_greedy_makespan": 14.0,
+      "sampled_mean_makespan": 15.125,
+      "best_of_k_makespan": 14.0,
+      "normalized_oracle_gap": 0.4,
+      "sampled_normalized_oracle_gap": 0.5125,
+      "feasible": true,
+      "trace_valid": true,
+      "best_has_active_wait": true,
+      "best_active_wait_count": 5,
+      "active_wait_ratio": 0.4090909090909091,
+      "passive_time_advance_ratio": 0.045454545454545456,
+      "forward_seconds": 0.12207549693994224,
+      "generation_seconds": 0.045066926162689924,
+      "no_active_wait_policy_greedy_makespan": null,
+      "best_trace": {
+        "decisions": [
+          "dispatch:3:1",
+          "skip",
+          "dispatch:5:1",
+          "skip",
+          "dispatch:2:1",
+          "skip",
+          "dispatch:0:1",
+          "skip",
+          "dispatch:4:1",
+          "skip",
+          "dispatch:1:0"
+        ],
+        "placements": [
+          {
+            "task": 0,
+            "pool": 1,
+            "start": 9.0,
+            "end": 12.0
+          },
+          {
+            "task": 1,
+            "pool": 0,
+            "start": 13.0,
+            "end": 14.0
+          },
+          {
+            "task": 2,
+            "pool": 1,
+            "start": 2.0,
+            "end": 9.0
+          },
+          {
+            "task": 3,
+            "pool": 1,
+            "start": 0.0,
+            "end": 1.0
+          },
+          {
+            "task": 4,
+            "pool": 1,
+            "start": 12.0,
+            "end": 13.0
+          },
+          {
+            "task": 5,
+            "pool": 1,
+            "start": 1.0,
+            "end": 2.0
+          }
+        ]
+      }
+    },
+    {
+      "instance": "f2-t0-seed-5283",
+      "family": "F2",
+      "template_id": "T0",
+      "source_audit_version": "phase16-v1",
+      "oracle_makespan": 8.0,
+      "external_greedy_makespan": 10.0,
+      "ca_heft_makespan": 8.0,
+      "policy_greedy_makespan": 13.0,
+      "sampled_mean_makespan": 13.75,
+      "best_of_k_makespan": 13.0,
+      "normalized_oracle_gap": 0.625,
+      "sampled_normalized_oracle_gap": 0.71875,
+      "feasible": true,
+      "trace_valid": true,
+      "best_has_active_wait": true,
+      "best_active_wait_count": 5,
+      "active_wait_ratio": 0.3269230769230769,
+      "passive_time_advance_ratio": 0.1346153846153846,
+      "forward_seconds": 0.011081577045843005,
+      "generation_seconds": 0.024856256088241935,
+      "no_active_wait_policy_greedy_makespan": null,
+      "best_trace": {
+        "decisions": [
+          "dispatch:5:0",
+          "skip",
+          "dispatch:4:0",
+          "skip",
+          "dispatch:0:0",
+          "skip",
+          "dispatch:3:0",
+          "skip",
+          "dispatch:2:0",
+          "skip",
+          "dispatch:1:1",
+          "skip",
+          "dispatch:6:1"
+        ],
+        "placements": [
+          {
+            "task": 0,
+            "pool": 0,
+            "start": 2.0,
+            "end": 7.0
+          },
+          {
+            "task": 1,
+            "pool": 1,
+            "start": 11.0,
+            "end": 12.0
+          },
+          {
+            "task": 2,
+            "pool": 0,
+            "start": 10.0,
+            "end": 11.0
+          },
+          {
+            "task": 3,
+            "pool": 0,
+            "start": 7.0,
+            "end": 10.0
+          },
+          {
+            "task": 4,
+            "pool": 0,
+            "start": 1.0,
+            "end": 2.0
+          },
+          {
+            "task": 5,
+            "pool": 0,
+            "start": 0.0,
+            "end": 1.0
+          },
+          {
+            "task": 6,
+            "pool": 1,
+            "start": 12.0,
+            "end": 13.0
+          }
+        ]
+      }
+    },
+    {
+      "instance": "f2-t1-seed-5304",
+      "family": "F2",
+      "template_id": "T1",
+      "source_audit_version": "phase16-v1",
+      "oracle_makespan": 8.0,
+      "external_greedy_makespan": 10.0,
+      "ca_heft_makespan": 8.0,
+      "policy_greedy_makespan": 12.0,
+      "sampled_mean_makespan": 13.5,
+      "best_of_k_makespan": 12.0,
+      "normalized_oracle_gap": 0.5,
+      "sampled_normalized_oracle_gap": 0.6875,
+      "feasible": true,
+      "trace_valid": true,
+      "best_has_active_wait": true,
+      "best_active_wait_count": 3,
+      "active_wait_ratio": 0.3181818181818182,
+      "passive_time_advance_ratio": 0.13636363636363635,
+      "forward_seconds": 0.00510050100274384,
+      "generation_seconds": 0.03404826601035893,
+      "no_active_wait_policy_greedy_makespan": null,
+      "best_trace": {
+        "decisions": [
+          "dispatch:1:1",
+          "skip",
+          "dispatch:3:1",
+          "skip",
+          "dispatch:5:1",
+          "skip",
+          "dispatch:0:1",
+          "skip",
+          "dispatch:4:0",
+          "skip",
+          "dispatch:2:1"
+        ],
+        "placements": [
+          {
+            "task": 0,
+            "pool": 1,
+            "start": 5.0,
+            "end": 10.0
+          },
+          {
+            "task": 1,
+            "pool": 1,
+            "start": 0.0,
+            "end": 1.0
+          },
+          {
+            "task": 2,
+            "pool": 1,
+            "start": 11.0,
+            "end": 12.0
+          },
+          {
+            "task": 3,
+            "pool": 1,
+            "start": 1.0,
+            "end": 4.0
+          },
+          {
+            "task": 4,
+            "pool": 0,
+            "start": 10.0,
+            "end": 11.0
+          },
+          {
+            "task": 5,
+            "pool": 1,
+            "start": 4.0,
+            "end": 5.0
+          }
+        ]
+      }
+    },
+    {
+      "instance": "f2-t1-seed-5305",
+      "family": "F2",
+      "template_id": "T1",
+      "source_audit_version": "phase16-v1",
+      "oracle_makespan": 10.0,
+      "external_greedy_makespan": 12.0,
+      "ca_heft_makespan": 10.0,
+      "policy_greedy_makespan": 14.0,
+      "sampled_mean_makespan": 14.375,
+      "best_of_k_makespan": 14.0,
+      "normalized_oracle_gap": 0.4,
+      "sampled_normalized_oracle_gap": 0.4375,
+      "feasible": true,
+      "trace_valid": true,
+      "best_has_active_wait": true,
+      "best_active_wait_count": 3,
+      "active_wait_ratio": 0.22115384615384615,
+      "passive_time_advance_ratio": 0.2403846153846154,
+      "forward_seconds": 0.02360610500909388,
+      "generation_seconds": 0.053387718042358756,
+      "no_active_wait_policy_greedy_makespan": null,
+      "best_trace": {
+        "decisions": [
+          "dispatch:0:1",
+          "skip",
+          "dispatch:2:1",
+          "skip",
+          "dispatch:6:1",
+          "skip",
+          "dispatch:5:1",
+          "skip",
+          "dispatch:3:0",
+          "skip",
+          "dispatch:4:1",
+          "skip",
+          "dispatch:1:1"
+        ],
+        "placements": [
+          {
+            "task": 0,
+            "pool": 1,
+            "start": 0.0,
+            "end": 1.0
+          },
+          {
+            "task": 1,
+            "pool": 1,
+            "start": 13.0,
+            "end": 14.0
+          },
+          {
+            "task": 2,
+            "pool": 1,
+            "start": 1.0,
+            "end": 4.0
+          },
+          {
+            "task": 3,
+            "pool": 0,
+            "start": 11.0,
+            "end": 12.0
+          },
+          {
+            "task": 4,
+            "pool": 1,
+            "start": 12.0,
+            "end": 13.0
+          },
+          {
+            "task": 5,
+            "pool": 1,
+            "start": 5.0,
+            "end": 11.0
+          },
+          {
+            "task": 6,
+            "pool": 1,
+            "start": 4.0,
+            "end": 5.0
+          }
+        ]
+      }
+    },
+    {
+      "instance": "f3-t0-seed-5480",
+      "family": "F3",
+      "template_id": "T0",
+      "source_audit_version": "phase16-v1",
+      "oracle_makespan": 13.0,
+      "external_greedy_makespan": 20.0,
+      "ca_heft_makespan": 13.0,
+      "policy_greedy_makespan": 21.0,
+      "sampled_mean_makespan": 20.875,
+      "best_of_k_makespan": 20.0,
+      "normalized_oracle_gap": 0.6153846153846154,
+      "sampled_normalized_oracle_gap": 0.6057692307692307,
+      "feasible": true,
+      "trace_valid": true,
+      "best_has_active_wait": false,
+      "best_active_wait_count": 0,
+      "active_wait_ratio": 0.022727272727272728,
+      "passive_time_advance_ratio": 0.4318181818181818,
+      "forward_seconds": 0.02555930893868208,
+      "generation_seconds": 0.016839283984154463,
+      "no_active_wait_policy_greedy_makespan": null,
+      "best_trace": {
+        "decisions": [
+          "dispatch:3:0",
+          "dispatch:4:0",
+          "skip",
+          "skip",
+          "dispatch:5:0",
+          "skip",
+          "dispatch:1:0",
+          "dispatch:2:0",
+          "skip",
+          "skip",
+          "dispatch:0:0"
+        ],
+        "placements": [
+          {
+            "task": 0,
+            "pool": 0,
+            "start": 19.0,
+            "end": 20.0
+          },
+          {
+            "task": 1,
+            "pool": 0,
+            "start": 9.0,
+            "end": 10.0
+          },
+          {
+            "task": 2,
+            "pool": 0,
+            "start": 9.0,
+            "end": 19.0
+          },
+          {
+            "task": 3,
+            "pool": 0,
+            "start": 0.0,
+            "end": 8.0
+          },
+          {
+            "task": 4,
+            "pool": 0,
+            "start": 0.0,
+            "end": 1.0
+          },
+          {
+            "task": 5,
+            "pool": 0,
+            "start": 8.0,
+            "end": 9.0
+          }
+        ]
+      }
+    },
+    {
+      "instance": "f3-t0-seed-5481",
+      "family": "F3",
+      "template_id": "T0",
+      "source_audit_version": "phase16-v1",
+      "oracle_makespan": 15.0,
+      "external_greedy_makespan": 23.0,
+      "ca_heft_makespan": 15.0,
+      "policy_greedy_makespan": 24.0,
+      "sampled_mean_makespan": 23.75,
+      "best_of_k_makespan": 23.0,
+      "normalized_oracle_gap": 0.6,
+      "sampled_normalized_oracle_gap": 0.5833333333333334,
+      "feasible": true,
+      "trace_valid": true,
+      "best_has_active_wait": false,
+      "best_active_wait_count": 0,
+      "active_wait_ratio": 0.0392156862745098,
+      "passive_time_advance_ratio": 0.4117647058823529,
+      "forward_seconds": 0.0076327030546963215,
+      "generation_seconds": 0.023530723992735147,
+      "no_active_wait_policy_greedy_makespan": null,
+      "best_trace": {
+        "decisions": [
+          "dispatch:4:0",
+          "dispatch:1:0",
+          "skip",
+          "skip",
+          "dispatch:5:0",
+          "skip",
+          "dispatch:2:0",
+          "dispatch:6:0",
+          "skip",
+          "skip",
+          "dispatch:3:0",
+          "skip",
+          "dispatch:0:0"
+        ],
+        "placements": [
+          {
+            "task": 0,
+            "pool": 0,
+            "start": 22.0,
+            "end": 23.0
+          },
+          {
+            "task": 1,
+            "pool": 0,
+            "start": 0.0,
+            "end": 1.0
+          },
+          {
+            "task": 2,
+            "pool": 0,
+            "start": 10.0,
+            "end": 21.0
+          },
+          {
+            "task": 3,
+            "pool": 0,
+            "start": 21.0,
+            "end": 22.0
+          },
+          {
+            "task": 4,
+            "pool": 0,
+            "start": 0.0,
+            "end": 9.0
+          },
+          {
+            "task": 5,
+            "pool": 0,
+            "start": 9.0,
+            "end": 10.0
+          },
+          {
+            "task": 6,
+            "pool": 0,
+            "start": 10.0,
+            "end": 11.0
+          }
+        ]
+      }
+    },
+    {
+      "instance": "f3-t1-seed-5504",
+      "family": "F3",
+      "template_id": "T1",
+      "source_audit_version": "phase16-v1",
+      "oracle_makespan": 13.0,
+      "external_greedy_makespan": 20.0,
+      "ca_heft_makespan": 13.0,
+      "policy_greedy_makespan": 21.0,
+      "sampled_mean_makespan": 20.75,
+      "best_of_k_makespan": 20.0,
+      "normalized_oracle_gap": 0.6153846153846154,
+      "sampled_normalized_oracle_gap": 0.5961538461538461,
+      "feasible": true,
+      "trace_valid": true,
+      "best_has_active_wait": false,
+      "best_active_wait_count": 0,
+      "active_wait_ratio": 0.011494252873563218,
+      "passive_time_advance_ratio": 0.4367816091954023,
+      "forward_seconds": 0.04017704213038087,
+      "generation_seconds": 0.017715113004669547,
+      "no_active_wait_policy_greedy_makespan": null,
+      "best_trace": {
+        "decisions": [
+          "dispatch:3:0",
+          "dispatch:2:0",
+          "skip",
+          "skip",
+          "dispatch:0:0",
+          "skip",
+          "dispatch:4:0",
+          "dispatch:1:0",
+          "skip",
+          "skip",
+          "dispatch:5:0"
+        ],
+        "placements": [
+          {
+            "task": 0,
+            "pool": 0,
+            "start": 8.0,
+            "end": 9.0
+          },
+          {
+            "task": 1,
+            "pool": 0,
+            "start": 9.0,
+            "end": 19.0
+          },
+          {
+            "task": 2,
+            "pool": 0,
+            "start": 0.0,
+            "end": 1.0
+          },
+          {
+            "task": 3,
+            "pool": 0,
+            "start": 0.0,
+            "end": 8.0
+          },
+          {
+            "task": 4,
+            "pool": 0,
+            "start": 9.0,
+            "end": 10.0
+          },
+          {
+            "task": 5,
+            "pool": 0,
+            "start": 19.0,
+            "end": 20.0
+          }
+        ]
+      }
+    },
+    {
+      "instance": "f3-t1-seed-5505",
+      "family": "F3",
+      "template_id": "T1",
+      "source_audit_version": "phase16-v1",
+      "oracle_makespan": 14.0,
+      "external_greedy_makespan": 22.0,
+      "ca_heft_makespan": 14.0,
+      "policy_greedy_makespan": 23.0,
+      "sampled_mean_makespan": 22.625,
+      "best_of_k_makespan": 22.0,
+      "normalized_oracle_gap": 0.6428571428571429,
+      "sampled_normalized_oracle_gap": 0.6160714285714286,
+      "feasible": true,
+      "trace_valid": true,
+      "best_has_active_wait": false,
+      "best_active_wait_count": 0,
+      "active_wait_ratio": 0.00980392156862745,
+      "passive_time_advance_ratio": 0.4411764705882353,
+      "forward_seconds": 0.015584715874865651,
+      "generation_seconds": 0.021702338941395283,
+      "no_active_wait_policy_greedy_makespan": null,
+      "best_trace": {
+        "decisions": [
+          "dispatch:6:0",
+          "dispatch:4:0",
+          "skip",
+          "dispatch:5:0",
+          "skip",
+          "skip",
+          "dispatch:2:0",
+          "skip",
+          "dispatch:3:0",
+          "dispatch:1:0",
+          "skip",
+          "skip",
+          "dispatch:0:0"
+        ],
+        "placements": [
+          {
+            "task": 0,
+            "pool": 0,
+            "start": 21.0,
+            "end": 22.0
+          },
+          {
+            "task": 1,
+            "pool": 0,
+            "start": 10.0,
+            "end": 21.0
+          },
+          {
+            "task": 2,
+            "pool": 0,
+            "start": 9.0,
+            "end": 10.0
+          },
+          {
+            "task": 3,
+            "pool": 0,
+            "start": 10.0,
+            "end": 11.0
+          },
+          {
+            "task": 4,
+            "pool": 0,
+            "start": 0.0,
+            "end": 9.0
+          },
+          {
+            "task": 5,
+            "pool": 0,
+            "start": 1.0,
+            "end": 2.0
+          },
+          {
+            "task": 6,
+            "pool": 0,
+            "start": 0.0,
+            "end": 1.0
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "count": 12,
+    "feasibility_rate": 1.0,
+    "mean_normalized_oracle_gap": 0.6661553724053724,
+    "median_normalized_oracle_gap": 0.6201923076923077,
+    "worst_normalized_oracle_gap": 1.0,
+    "greedy_win_rate": 0.0,
+    "ca_heft_win_rate": 0.0,
+    "active_wait_ratio": 0.21202125995482993,
+    "passive_time_advance_ratio": 0.24474865482725527,
+    "forward_seconds_mean": 0.038741401998170964,
+    "generation_seconds_mean": 0.028220021262920152
+  },
+  "groups": {
+    "overall": {
+      "count": 12,
+      "feasibility_rate": 1.0,
+      "mean_normalized_oracle_gap": 0.6661553724053724,
+      "median_normalized_oracle_gap": 0.6201923076923077,
+      "worst_normalized_oracle_gap": 1.0,
+      "greedy_win_rate": 0.0,
+      "ca_heft_win_rate": 0.0,
+      "active_wait_ratio": 0.21202125995482993,
+      "passive_time_advance_ratio": 0.24474865482725527,
+      "forward_seconds_mean": 0.038741401998170964,
+      "generation_seconds_mean": 0.028220021262920152
+    },
+    "F1": {
+      "count": 4,
+      "feasibility_rate": 1.0,
+      "mean_normalized_oracle_gap": 0.898809523809524,
+      "median_normalized_oracle_gap": 0.8976190476190476,
+      "worst_normalized_oracle_gap": 1.0,
+      "greedy_win_rate": 0.0,
+      "ca_heft_win_rate": 0.0,
+      "active_wait_ratio": 0.29641608391608393,
+      "passive_time_advance_ratio": 0.16465617715617714,
+      "forward_seconds_mean": 0.053519843495450914,
+      "generation_seconds_mean": 0.025373407232109457
+    },
+    "F2": {
+      "count": 4,
+      "feasibility_rate": 1.0,
+      "mean_normalized_oracle_gap": 0.48124999999999996,
+      "median_normalized_oracle_gap": 0.45,
+      "worst_normalized_oracle_gap": 0.625,
+      "greedy_win_rate": 0.0,
+      "ca_heft_win_rate": 0.0,
+      "active_wait_ratio": 0.3188374125874126,
+      "passive_time_advance_ratio": 0.13920454545454544,
+      "forward_seconds_mean": 0.04046591999940574,
+      "generation_seconds_mean": 0.039339791575912386
+    },
+    "F3": {
+      "count": 4,
+      "feasibility_rate": 1.0,
+      "mean_normalized_oracle_gap": 0.6184065934065934,
+      "median_normalized_oracle_gap": 0.6153846153846154,
+      "worst_normalized_oracle_gap": 0.6428571428571429,
+      "greedy_win_rate": 0.0,
+      "ca_heft_win_rate": 0.0,
+      "active_wait_ratio": 0.020810283360993297,
+      "passive_time_advance_ratio": 0.43038524187104304,
+      "forward_seconds_mean": 0.02223844249965623,
+      "generation_seconds_mean": 0.01994686498073861
+    },
+    "F2:phase16-v1": {
+      "count": 4,
+      "feasibility_rate": 1.0,
+      "mean_normalized_oracle_gap": 0.48124999999999996,
+      "median_normalized_oracle_gap": 0.45,
+      "worst_normalized_oracle_gap": 0.625,
+      "greedy_win_rate": 0.0,
+      "ca_heft_win_rate": 0.0,
+      "active_wait_ratio": 0.3188374125874126,
+      "passive_time_advance_ratio": 0.13920454545454544,
+      "forward_seconds_mean": 0.04046591999940574,
+      "generation_seconds_mean": 0.039339791575912386
+    },
+    "F3:phase16-v1": {
+      "count": 4,
+      "feasibility_rate": 1.0,
+      "mean_normalized_oracle_gap": 0.6184065934065934,
+      "median_normalized_oracle_gap": 0.6153846153846154,
+      "worst_normalized_oracle_gap": 0.6428571428571429,
+      "greedy_win_rate": 0.0,
+      "ca_heft_win_rate": 0.0,
+      "active_wait_ratio": 0.020810283360993297,
+      "passive_time_advance_ratio": 0.43038524187104304,
+      "forward_seconds_mean": 0.02223844249965623,
+      "generation_seconds_mean": 0.01994686498073861
+    }
+  }
+}

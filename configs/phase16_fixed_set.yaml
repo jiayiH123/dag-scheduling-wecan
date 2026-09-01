@@ -1,0 +1,51 @@
+# Phase 1.6 fixed-small-set data screening. No policy training is invoked here.
+seed: 2026
+screening:
+  version: phase16-v1
+  per_candidate_milp_timeout_seconds: 10
+  per_candidate_exhaustive_timeout_seconds: 10
+  per_candidate_exhaustive_node_limit: 250000
+  per_family_wall_clock_cap_seconds: 900
+families:
+  F1:
+    candidate_seed_range: [5000, 5199]
+    templates:
+      M0:
+        train: {seeds: [5000, 5026], quota: 3}
+        validation: {seeds: [5080, 5093], quota: 2}
+        test: {seeds: [5120, 5146], quota: 4}
+      M1:
+        train: {seeds: [5027, 5053], quota: 3}
+        validation: {seeds: [5094, 5106], quota: 1}
+        test: {seeds: [5147, 5173], quota: 3}
+      M2:
+        train: {seeds: [5054, 5079], quota: 2}
+        validation: {seeds: [5107, 5119], quota: 1}
+        test: {seeds: [5174, 5199], quota: 3}
+  F2:
+    candidate_seed_range: [5200, 5399]
+    templates:
+      T0:
+        train: {seeds: [5200, 5239], quota: 4}
+        validation: {seeds: [5280, 5299], quota: 2}
+      T1:
+        train: {seeds: [5240, 5279], quota: 4}
+        validation: {seeds: [5300, 5319], quota: 2}
+      T2:
+        test: {seeds: [5320, 5399], quota: 10}
+  F3:
+    candidate_seed_range: [5400, 5599]
+    templates:
+      T0:
+        train: {seeds: [5400, 5439], quota: 4}
+        validation: {seeds: [5480, 5499], quota: 2}
+      T1:
+        train: {seeds: [5440, 5479], quota: 4}
+        validation: {seeds: [5500, 5519], quota: 2}
+      T2:
+        test: {seeds: [5520, 5599], quota: 10}
+acceptance:
+  f2_greedy_gap_range: [0.05, 0.30]
+  f2_absolute_greedy_gap_ticks: 2
+  f3_min_wait_benefit: 0.10
+  f3_min_greedy_gap: 0.05

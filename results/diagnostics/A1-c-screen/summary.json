@@ -1,0 +1,8 @@
+{
+  "stage": "A1-c-screen",
+  "screening_only": true,
+  "fixture_count": 1,
+  "selected_fixture": "a1c_active_wait_six_task",
+  "stopped_without_selection": false,
+  "audit_path": "results/diagnostics/A1-c-screen/candidates.jsonl"
+}

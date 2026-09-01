@@ -1,0 +1,86 @@
+# Executable Phase-1 WeCAN paper-baseline configuration.
+#
+# `paper_specification` records values stated in the paper. The random generator and
+# `implementation_assumptions` are local choices because the paper datasets/code and
+# several training details are not available. This configuration is communication-free
+# and contains no budget, PPO, or fixed-priority settings.
+seed: 2026
+
+paper_specification:
+  task_input_dim: 3
+  pool_input_dim: 2
+  high_dim: 512
+  low_dim: 128
+  weca_heads: 8
+  ldd_layers: 8
+  ldd_heads: 16
+  ldd_mask_types: 8
+  heads_per_ldd_mask: 2
+  dmax: 500
+  skip_hidden_layers: 2
+  skip_hidden_dim: 64
+  skip_parameterization: paper_sigmoid
+  optimizer: adam
+  learning_rate: 0.0001
+  batch_size: 64
+  training_batches: 800
+  reinforce_baseline: instance_mean
+
+implementation_assumptions:
+  dataset: local_seeded_random_dags_not_paper_tpch_riw_or_computation_graphs
+  resource_dims: 2
+  alternating_weca_layers: 2
+  rollouts_per_instance: 8
+  average_sample_baseline_interpretation: per_instance_mean_including_current_sample
+  ldd_bias: head_specific_pending_paper_code_confirmation
+  transformer_block: post_layer_norm_with_output_projection_and_two_x_ffn_no_dropout
+  skip_head: two_gelu_hidden_layers_then_elementwise_sigmoid
+  decoder_projection_bias: false
+
+# Local deterministic data used to exercise the paper architecture. These are not
+# claimed to be the paper's TPC-H, RI-W, or computation-graph generation parameters.
+generator:
+  num_tasks_min: 12
+  num_tasks_max: 24
+  num_pools: 3
+  resource_dims: 2
+  max_width: 5
+  edge_probability: 0.35
+  duration_low: 5.0
+  duration_high: 30.0
+  demand_fraction_low: 0.08
+  demand_fraction_high: 0.45
+  capacity_low: 40.0
+  capacity_high: 100.0
+  incompatibility_probability: 0.15
+  compatibility_low: 0.6
+  compatibility_high: 1.5
+
+model:
+  profile: paper
+  high_dim: 512
+  low_dim: 128
+  weca_heads: 8
+  ldd_heads: 16
+  ldd_layers: 8
+  # Implementation assumption: the paper does not specify this count.
+  alternating_weca_layers: 2
+  dmax: 500
+  skip_hidden_dim: 64
+  skip_parameterization: paper_sigmoid
+  # Unused by paper_sigmoid; retained for schema compatibility with other profiles.
+  minimum_skip_parameter: 0.0001
+
+training:
+  optimizer: adam
+  learning_rate: 0.0001
+  batch_size: 64
+  # `max_updates`, rather than epochs, implements the paper's 800 training batches.
+  max_updates: 800
+  # Safety ceiling: even a one-batch dataset can reach max_updates=800.
+  epochs: 800
+  reinforce_baseline: instance_mean
+  # Implementation assumption: the paper does not report training rollouts per instance.
+  rollouts_per_instance: 8
+  # Unused by instance_mean; retained because TrainConfig validates a complete schema.
+  snapshot_sync_interval_updates: 50

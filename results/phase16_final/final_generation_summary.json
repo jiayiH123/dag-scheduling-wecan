@@ -1,0 +1,19 @@
+{
+  "total_instances": 66,
+  "split_counts": {
+    "train": 24,
+    "validation": 12,
+    "test": 30
+  },
+  "test_composition": {
+    "F2": {
+      "phase16-v1_T2": 6,
+      "phase16-v2_T2-v2": 4
+    },
+    "F3": {
+      "phase16-v1_T2": 9,
+      "phase16-v2_T2-v2": 1
+    }
+  },
+  "semantic_rechecks_passed": 66
+}

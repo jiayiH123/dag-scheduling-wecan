@@ -1,0 +1,38 @@
+# Phase 1 WeCAN faithful-reimplementation defaults.
+# Assumptions absent from the paper are intentionally explicit here.
+seed: 2026
+generator:
+  num_tasks_min: 12
+  num_tasks_max: 24
+  num_pools: 3
+  resource_dims: 2
+  max_width: 5
+  edge_probability: 0.35
+  duration_low: 5.0
+  duration_high: 30.0
+  demand_fraction_low: 0.08
+  demand_fraction_high: 0.45
+  capacity_low: 40.0
+  capacity_high: 100.0
+  incompatibility_probability: 0.15
+  compatibility_low: 0.6
+  compatibility_high: 1.5
+model:
+  profile: smoke
+  high_dim: 128
+  low_dim: 128
+  weca_heads: 8
+  ldd_heads: 8
+  ldd_layers: 2
+  alternating_weca_layers: 2
+  dmax: 500
+  skip_hidden_dim: 64
+  skip_parameterization: softplus
+  minimum_skip_parameter: 0.0001
+training:
+  learning_rate: 0.0001
+  batch_size: 16
+  epochs: 20
+  reinforce_baseline: instance_leave_one_out
+  rollouts_per_instance: 8
+  snapshot_sync_interval_updates: 50

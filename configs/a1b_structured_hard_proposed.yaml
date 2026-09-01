@@ -1,0 +1,3 @@
+# Superseded: retained for traceability only. See a1b_exact.yaml and a1b_scale_proposed.yaml.
+name: a1b_structured_hard_v1_superseded
+status: superseded_by_exact_scale_split

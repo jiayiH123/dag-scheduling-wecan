@@ -1,0 +1,27 @@
+name: a1b_exact_structured_v1
+status: approved_for_screening_only
+seed_range: [4000, 4099]
+instance:
+  task_range: [6, 7]
+  pools: 2
+  resource_dims: 2
+  exact_integer_ticks: true
+pools:
+  fast_tight:
+    capacity: [7, 7]
+  slow_loose:
+    capacity: [14, 14]
+selection:
+  ascending_seed_first_valid: true
+acceptance:
+  milp_proven_optimal: true
+  validator_pass: true
+  exhaustive_with_wait_complete: true
+  exhaustive_without_wait_complete: true
+  with_wait_equals_without_wait: true
+  require_without_wait_optimal_witness: true
+  external_greedy_relative_gap_range: [0.05, 0.30]
+  external_greedy_absolute_gap_ticks: 2
+prohibitions:
+  use_seed_range_4100_4199_without_new_approval: true
+  train_during_screening: true

@@ -1,0 +1,55 @@
+# Phase 1.5 diagnostic gate configuration. Long runs are not started automatically.
+seed: 2026
+model:
+  profile: smoke
+  high_dim: 64
+  low_dim: 64
+  weca_heads: 4
+  ldd_heads: 4
+  ldd_layers: 1
+  alternating_weca_layers: 1
+  dmax: 500
+  skip_hidden_dim: 64
+  skip_parameterization: softplus
+  minimum_skip_parameter: 0.0001
+training:
+  learning_rate: 0.0003
+  batch_size: 1
+  rollouts_per_instance: 8
+  baseline_mode: instance_leave_one_out
+  snapshot_sync_interval_updates: 20
+  max_updates: 300
+  min_relative_improvement: 0.05
+# Formal dynamic training only after explicit completed diagnostic gates.
+dynamic:
+  task_range: [20, 50]
+  pools: 3
+  resource_dims: 2
+  screen_updates: 250
+  formal_updates: 800
+  seeds: [2000, 2001, 2002]
+  baselines: [batch_global_mean, instance_leave_one_out, snapshot_greedy_rollout]
+
+# Pre-registered selection-only A1-b protocol. No training signal participates.
+a1b_screen:
+  seed_range: [3000, 3099]
+  task_range: [8, 10]
+  pools: 3
+  resource_dims: 2
+  max_width: 4
+  edge_probability: 0.35
+  duration_range: [1, 5]
+  demand_fraction_range: [0.15, 0.5]
+  capacity_range: [6, 12]
+  incompatibility_probability: 0.15
+  compatibility_range: [1, 1]
+  required_relative_external_greedy_gap: 0.05
+  required_absolute_external_greedy_gap_ticks: 2
+  preferred_relative_external_greedy_gap_range: [0.05, 0.30]
+
+# A1-a evaluates contraction from policy decode to policy decode, not from an
+# external heuristic. A1-c uses the predeclared six-task hand-crafted fixture.
+a1a:
+  oracle_gap_closure_threshold: 1.0
+  sampled_mean_relative_reduction_threshold: 0.05
+  zero_tolerance: 0.000001

@@ -1,0 +1,14 @@
+# Fast model configuration for unit tests and short diagnostic gates; not paper architecture.
+seed: 2026
+model:
+  profile: smoke
+  high_dim: 128
+  low_dim: 128
+  weca_heads: 8
+  ldd_heads: 8
+  ldd_layers: 2
+  alternating_weca_layers: 2
+  dmax: 500
+  skip_hidden_dim: 64
+  skip_parameterization: softplus
+  minimum_skip_parameter: 0.0001

@@ -1,0 +1,90 @@
+generator_version: phase16-t2-v2-generator-1
+selection_version: phase16-t2-v2-global-structural-selection-2
+permutation_version: phase16-permute-v2
+structural_fingerprint_version: phase16-structural-canonical-v1
+field_hash_format: "phase16-v2:{family}:{template}:{seed}:{field_name}"
+field_hash_digest: sha256-first-8-bytes-big-endian-mod-cardinality
+patterns_version: phase16-t2-v2-patterns-1
+screening:
+  per_candidate_milp_timeout_seconds: 10
+  per_candidate_exhaustive_timeout_seconds: 10
+  per_candidate_exhaustive_node_limit: 250000
+  per_family_wall_clock_cap_seconds: 900
+acceptance:
+  f2_greedy_gap_range: [0.05, 0.30]
+  f2_absolute_greedy_gap_ticks: 2
+  f3_min_wait_benefit: 0.10
+  f3_min_greedy_gap: 0.05
+families:
+  F2:
+    template_id: T2-v2
+    split: test
+    seed_range: [6000, 6099]
+    required_new_unique: 4
+    fields:
+      task_count: [6, 7]
+      root_duration: [1, 2]
+      critical_x_duration: [1, 2]
+      critical_y_duration: [5, 6, 7, 8]
+      branch_duration: [3, 4, 5]
+      branch_tail_duration: [1, 2, 3]
+      critical_tail_duration: [1, 2]
+      x_demand: [5, 6]
+      y_demand: [5, 6]
+      slow_multiplier: [2, 4]
+      merge_patterns:
+        T2V2-A:
+          edges6: [[root, critical_x], [critical_x, critical_y], [branch, branch_tail], [branch_tail, final]]
+          edges7: [[root, critical_x], [critical_x, critical_y], [branch, branch_tail], [branch_tail, final], [critical_y, optional]]
+        T2V2-B:
+          edges6: [[root, critical_x], [critical_x, critical_y], [branch, branch_tail], [critical_y, final], [branch_tail, final]]
+          edges7: [[root, critical_x], [critical_x, critical_y], [branch, branch_tail], [critical_y, final], [branch_tail, optional], [optional, final]]
+        T2V2-C:
+          edges6: [[root, critical_x], [critical_x, critical_y], [branch, branch_tail], [critical_y, final], [branch_tail, critical_y]]
+          edges7: [[root, critical_x], [critical_x, critical_y], [branch, branch_tail], [branch_tail, optional], [optional, final], [critical_y, final]]
+      optional_seventh_positions:
+        branch_extension:
+          role: optional
+          demand: x
+          compatibility: slow_only
+          duration_field: branch_tail_duration
+        critical_extension:
+          role: optional
+          demand: y
+          compatibility: fast_only
+          duration_field: critical_tail_duration
+  F3:
+    template_id: T2-v2
+    split: test
+    seed_range: [6100, 6199]
+    required_new_unique: 1
+    fields:
+      task_count: [6, 7]
+      root_duration: [1, 2]
+      critical_duration: [1, 2]
+      blocker_duration: [7, 8, 9, 10]
+      long_descendant_duration: [10, 11, 12, 13]
+      blocker_tail_duration: [1, 2]
+      critical_tail_duration: [1, 2]
+      active_wait_positions:
+        ROOT_GATE:
+          description: blocker is dispatchable while root-y runs; active wait defers blocker until critical-x starts
+        SHORT_GATE:
+          description: blocker is dispatchable while a short y gate runs; active wait preserves x for a critical transition released by the gate
+      merge_sidework_patterns:
+        T2V2-A:
+          edges6: [[root, critical], [critical, long], [blocker, blocker_tail], [long, final], [blocker_tail, final]]
+          edges7: [[root, critical], [critical, long], [blocker, blocker_tail], [long, final], [blocker_tail, optional], [optional, final]]
+        T2V2-B:
+          edges6: [[root, critical], [critical, long], [blocker, blocker_tail], [blocker_tail, final], [long, final]]
+          edges7: [[root, critical], [critical, long], [blocker, blocker_tail], [root, optional], [optional, final], [long, final]]
+        T2V2-C:
+          edges6: [[root, critical], [critical, long], [blocker, blocker_tail], [long, final], [blocker_tail, final]]
+          edges7: [[root, critical], [critical, long], [blocker, blocker_tail], [blocker_tail, optional], [optional, final], [long, final]]
+      optional_seventh_roles:
+        x_tail:
+          demand: x
+          predecessor: blocker_tail
+        y_tail:
+          demand: y
+          predecessor: long

@@ -1,0 +1,7309 @@
+[
+  {
+    "family": "F1",
+    "split": "train",
+    "template_id": "M0",
+    "seed": 5000,
+    "instance": {
+      "name": "f1-m0-seed-5000",
+      "task_durations": [
+        5.0,
+        3.0,
+        5.0,
+        5.0,
+        3.0,
+        3.0,
+        5.0,
+        2.0
+      ],
+      "task_demands": [
+        [
+          2.0,
+          4.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          3.0,
+          3.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          3.0,
+          2.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          12.0,
+          12.0
+        ],
+        [
+          8.0,
+          8.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          1
+        ]
+      ]
+    },
+    "instance_fingerprint": "7ec63806e45a372a4c6cfca7a7ba5de69e6c2b94f87a50165b7d02c9cc80bfbd",
+    "structural_fingerprint": "8f55ad19cb32aab291d1852b4193f54b58bc00d51458f696c2c04be05b759c0a",
+    "selection_order": 0,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "train",
+    "template_id": "M0",
+    "seed": 5001,
+    "instance": {
+      "name": "f1-m0-seed-5001",
+      "task_durations": [
+        6.0,
+        4.0,
+        3.0,
+        3.0,
+        5.0,
+        3.0
+      ],
+      "task_demands": [
+        [
+          4.0,
+          1.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          3.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          3.0,
+          2.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          8.0,
+          8.0
+        ],
+        [
+          12.0,
+          12.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ]
+    },
+    "instance_fingerprint": "0f33eee0b37ab58f2ae13f7cf058eda26eaef37067cb63349ffd969b1274bfec",
+    "structural_fingerprint": "2d28c4e6cf41e67dd24a80815a711d8d0b669a7f7e8c54e8537ce705aa978e5f",
+    "selection_order": 1,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "train",
+    "template_id": "M0",
+    "seed": 5002,
+    "instance": {
+      "name": "f1-m0-seed-5002",
+      "task_durations": [
+        6.0,
+        4.0,
+        5.0,
+        3.0,
+        3.0,
+        4.0,
+        4.0
+      ],
+      "task_demands": [
+        [
+          4.0,
+          1.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          3.0,
+          3.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          12.0,
+          12.0
+        ],
+        [
+          8.0,
+          8.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          3
+        ]
+      ]
+    },
+    "instance_fingerprint": "0b3c41d65ccd6bb8e2f14515adeaff2e1f4af8dc0fc1009e4ea0bf8887f448d8",
+    "structural_fingerprint": "711a4d3e6d14d19d461ff660fc1df44001e602ff34444e9f67a1bff3e1fb7596",
+    "selection_order": 2,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "train",
+    "template_id": "M1",
+    "seed": 5027,
+    "instance": {
+      "name": "f1-m1-seed-5027",
+      "task_durations": [
+        5.0,
+        3.0,
+        2.0,
+        4.0,
+        5.0,
+        5.0,
+        2.0,
+        2.0
+      ],
+      "task_demands": [
+        [
+          3.0,
+          2.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          3.0,
+          3.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          8.0,
+          8.0
+        ],
+        [
+          12.0,
+          12.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          5
+        ]
+      ]
+    },
+    "instance_fingerprint": "8117ccc0fefb42339b0d44c700ddceba4c2c0557f874a8477b8eb78c3a9eb9b6",
+    "structural_fingerprint": "5bf6e4a197d88487f15269f5007affc5e2d4a5b836fa0ba260e404b17f8a9c7e",
+    "selection_order": 3,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "train",
+    "template_id": "M1",
+    "seed": 5028,
+    "instance": {
+      "name": "f1-m1-seed-5028",
+      "task_durations": [
+        2.0,
+        3.0,
+        4.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "task_demands": [
+        [
+          3.0,
+          3.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          4.0,
+          1.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          8.0,
+          8.0
+        ],
+        [
+          12.0,
+          12.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "instance_fingerprint": "afe676d28b0e32020f020f359fe52716eda5652a5b17c8fd479cddcb61fd5aed",
+    "structural_fingerprint": "72c7e45482625883854d6edb8ce8c5f4b39ed6f25e2932de97a8318446f25749",
+    "selection_order": 4,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "train",
+    "template_id": "M1",
+    "seed": 5029,
+    "instance": {
+      "name": "f1-m1-seed-5029",
+      "task_durations": [
+        4.0,
+        4.0,
+        4.0,
+        2.0,
+        4.0,
+        6.0,
+        2.0
+      ],
+      "task_demands": [
+        [
+          2.0,
+          4.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          3.0,
+          3.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          12.0,
+          12.0
+        ],
+        [
+          8.0,
+          8.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          5
+        ]
+      ]
+    },
+    "instance_fingerprint": "af668b3dee94fc2009c8051b7db39ed1e498d371988d3e896d564e4426d1a4eb",
+    "structural_fingerprint": "4e6717aedbd7a35f96207a8653495ff4da9a0fe38a17d6aed2554fae80d56812",
+    "selection_order": 5,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "train",
+    "template_id": "M2",
+    "seed": 5054,
+    "instance": {
+      "name": "f1-m2-seed-5054",
+      "task_durations": [
+        3.0,
+        3.0,
+        2.0,
+        5.0,
+        5.0,
+        3.0,
+        5.0,
+        5.0
+      ],
+      "task_demands": [
+        [
+          2.0,
+          4.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          3.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          3.0,
+          2.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          8.0,
+          8.0
+        ],
+        [
+          12.0,
+          12.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          4
+        ]
+      ]
+    },
+    "instance_fingerprint": "80fadaf3a4e74e0d58c23e7a089036796f374ca4193a37257f86b0750d7f51c6",
+    "structural_fingerprint": "929e50936c892b977b496f8a3090521671f276bf53abe1d6bd379180efd7778b",
+    "selection_order": 6,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "train",
+    "template_id": "M2",
+    "seed": 5055,
+    "instance": {
+      "name": "f1-m2-seed-5055",
+      "task_durations": [
+        3.0,
+        5.0,
+        3.0,
+        4.0,
+        6.0,
+        3.0
+      ],
+      "task_demands": [
+        [
+          3.0,
+          3.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          3.0,
+          2.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          8.0,
+          8.0
+        ],
+        [
+          12.0,
+          12.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "532b253f66b988fc0899c2593c9a7bb8b3066697abe2d37d817e12ef3d2cc6c4",
+    "structural_fingerprint": "c6ca924eb964c9bffd82fae06185c714b1e97d331c70260b00616c96d99ed1c4",
+    "selection_order": 7,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "validation",
+    "template_id": "M0",
+    "seed": 5080,
+    "instance": {
+      "name": "f1-m0-seed-5080",
+      "task_durations": [
+        2.0,
+        2.0,
+        5.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0
+      ],
+      "task_demands": [
+        [
+          3.0,
+          3.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          4.0,
+          2.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          12.0,
+          12.0
+        ],
+        [
+          8.0,
+          8.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          0
+        ]
+      ]
+    },
+    "instance_fingerprint": "77bbb755e55b73784acbe0742be72e3020fcbfdd7a9a2d191de4cb44adce74ce",
+    "structural_fingerprint": "a463f46a344ce5a527bcca7cfa77161835ce5da8aa92a5704d2f09a013f56251",
+    "selection_order": 8,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "validation",
+    "template_id": "M0",
+    "seed": 5081,
+    "instance": {
+      "name": "f1-m0-seed-5081",
+      "task_durations": [
+        5.0,
+        5.0,
+        2.0,
+        3.0,
+        2.0,
+        2.0,
+        5.0,
+        4.0
+      ],
+      "task_demands": [
+        [
+          3.0,
+          2.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          3.0,
+          3.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          4.0,
+          2.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          12.0,
+          12.0
+        ],
+        [
+          8.0,
+          8.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "264800c0c8ce33dbd80437dd9c1d8b5310a51c8b5d72531c83f3f0afa401bddf",
+    "structural_fingerprint": "e444582106880045a0527fb26b4fe3c7cd9f5e07a70efe1afde75ecfdc768d35",
+    "selection_order": 9,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "validation",
+    "template_id": "M1",
+    "seed": 5094,
+    "instance": {
+      "name": "f1-m1-seed-5094",
+      "task_durations": [
+        4.0,
+        2.0,
+        3.0,
+        2.0,
+        4.0,
+        3.0
+      ],
+      "task_demands": [
+        [
+          4.0,
+          2.0
+        ],
+        [
+          3.0,
+          3.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          2.0,
+          4.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          12.0,
+          12.0
+        ],
+        [
+          8.0,
+          8.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          4
+        ]
+      ]
+    },
+    "instance_fingerprint": "c1e5fdd4b86fe65380d74abf7731c9d80bd62aaf86356cba76a81915f99e67e3",
+    "structural_fingerprint": "239a9d57420b8416db6013e612c2009b76545e90dc4a24610f1a1660b7996f75",
+    "selection_order": 10,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "validation",
+    "template_id": "M2",
+    "seed": 5107,
+    "instance": {
+      "name": "f1-m2-seed-5107",
+      "task_durations": [
+        5.0,
+        3.0,
+        3.0,
+        5.0,
+        4.0,
+        3.0,
+        4.0
+      ],
+      "task_demands": [
+        [
+          4.0,
+          1.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          3.0
+        ],
+        [
+          3.0,
+          2.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          12.0,
+          12.0
+        ],
+        [
+          8.0,
+          8.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          4
+        ]
+      ]
+    },
+    "instance_fingerprint": "36501fe9a2607844f1ab0257487852af29b8b9996d0f82108afdf929491ba659",
+    "structural_fingerprint": "7e7df5f84822303dde6989ac73a8be14d6457c6cd55b09c0ec1ee8c3819bef59",
+    "selection_order": 11,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "test",
+    "template_id": "M0",
+    "seed": 5120,
+    "instance": {
+      "name": "f1-m0-seed-5120",
+      "task_durations": [
+        4.0,
+        6.0,
+        4.0,
+        2.0,
+        2.0,
+        3.0,
+        5.0,
+        5.0
+      ],
+      "task_demands": [
+        [
+          2.0,
+          3.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          3.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          2.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          12.0,
+          12.0
+        ],
+        [
+          8.0,
+          8.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "cf3e054a14eeb31cac651200fe3fdaad2a1e8e6daae930cab7afa2ccb8ffac96",
+    "structural_fingerprint": "bed2278ecf3e259f6e6a233646df5e15232fd18944cb56e0ec4a84ee1c74e510",
+    "selection_order": 12,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "test",
+    "template_id": "M0",
+    "seed": 5121,
+    "instance": {
+      "name": "f1-m0-seed-5121",
+      "task_durations": [
+        5.0,
+        2.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0
+      ],
+      "task_demands": [
+        [
+          4.0,
+          2.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          3.0
+        ],
+        [
+          4.0,
+          1.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          8.0,
+          8.0
+        ],
+        [
+          12.0,
+          12.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    "instance_fingerprint": "c2456fd75ae10dde3987028f5d710b54e34ba87928cbe6e1f7d226c83d291146",
+    "structural_fingerprint": "d7033575a8bb3fbd13e80ccfb4250e94a099509c10367f4bdeed48f0d182fab5",
+    "selection_order": 13,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "test",
+    "template_id": "M0",
+    "seed": 5122,
+    "instance": {
+      "name": "f1-m0-seed-5122",
+      "task_durations": [
+        3.0,
+        4.0,
+        3.0,
+        4.0,
+        2.0,
+        4.0,
+        5.0
+      ],
+      "task_demands": [
+        [
+          3.0,
+          3.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          4.0,
+          2.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          8.0,
+          8.0
+        ],
+        [
+          12.0,
+          12.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          0
+        ]
+      ]
+    },
+    "instance_fingerprint": "50dc0cba3250ca32ca9cf0ef9d3fa3a20cc0ae540f2f81104ce9e2c1fad55cc9",
+    "structural_fingerprint": "5bdf8f378fbd05489f0d02b751befca3cd4cca5c1da2cb7b565fc74be34a9b37",
+    "selection_order": 14,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "test",
+    "template_id": "M0",
+    "seed": 5123,
+    "instance": {
+      "name": "f1-m0-seed-5123",
+      "task_durations": [
+        5.0,
+        3.0,
+        4.0,
+        3.0,
+        2.0,
+        5.0,
+        1.0,
+        5.0
+      ],
+      "task_demands": [
+        [
+          3.0,
+          2.0
+        ],
+        [
+          3.0,
+          3.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          8.0,
+          8.0
+        ],
+        [
+          12.0,
+          12.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ]
+    },
+    "instance_fingerprint": "a919cff11ee30c8f71b5a90be119401f56483d39e0f5daa0245ee0199daa20cd",
+    "structural_fingerprint": "4e0060f5d6545cff9fd901d2c6952aa2c1d3e01ba4050df485d34abd6e1fd03b",
+    "selection_order": 15,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "test",
+    "template_id": "M1",
+    "seed": 5147,
+    "instance": {
+      "name": "f1-m1-seed-5147",
+      "task_durations": [
+        5.0,
+        4.0,
+        5.0,
+        3.0,
+        5.0,
+        3.0,
+        6.0,
+        3.0
+      ],
+      "task_demands": [
+        [
+          3.0,
+          2.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          3.0,
+          3.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          8.0,
+          8.0
+        ],
+        [
+          12.0,
+          12.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          6
+        ]
+      ]
+    },
+    "instance_fingerprint": "0c98cff9eeac78960afed6a4dd3209bdaf9e9dfd69403f43606c8b2d8d67d810",
+    "structural_fingerprint": "9b04f4453294ca0d0ff6d3b005d89bc89123881135a90d27495f1fe6ceee044d",
+    "selection_order": 16,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "test",
+    "template_id": "M1",
+    "seed": 5149,
+    "instance": {
+      "name": "f1-m1-seed-5149",
+      "task_durations": [
+        4.0,
+        2.0,
+        4.0,
+        2.0,
+        4.0,
+        2.0,
+        4.0
+      ],
+      "task_demands": [
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          3.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          4.0,
+          1.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          8.0,
+          8.0
+        ],
+        [
+          12.0,
+          12.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          6,
+          5
+        ]
+      ]
+    },
+    "instance_fingerprint": "47e7be4b05cec375f4c815dc61d9483beecca6a30c94524041a88bf2835f36d1",
+    "structural_fingerprint": "4ff04746352057f4e693c731dc90498affe4053a35be9ac2a05503c5c705ead8",
+    "selection_order": 17,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "test",
+    "template_id": "M1",
+    "seed": 5150,
+    "instance": {
+      "name": "f1-m1-seed-5150",
+      "task_durations": [
+        2.0,
+        2.0,
+        4.0,
+        1.0,
+        2.0,
+        4.0,
+        5.0,
+        5.0
+      ],
+      "task_demands": [
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          3.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          2.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          12.0,
+          12.0
+        ],
+        [
+          8.0,
+          8.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          6
+        ]
+      ]
+    },
+    "instance_fingerprint": "2b8dcbde4b31c6d2523565a3804fde1ae51a07fe1ca0ced727ac2f14916314c2",
+    "structural_fingerprint": "9d8fe4fd331ff7c8c9708d181be19566ee4d06a8276312479cad168c05346fb1",
+    "selection_order": 18,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "test",
+    "template_id": "M2",
+    "seed": 5174,
+    "instance": {
+      "name": "f1-m2-seed-5174",
+      "task_durations": [
+        4.0,
+        2.0,
+        3.0,
+        5.0,
+        4.0,
+        5.0,
+        6.0,
+        2.0
+      ],
+      "task_demands": [
+        [
+          2.0,
+          3.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          3.0,
+          3.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          8.0,
+          8.0
+        ],
+        [
+          12.0,
+          12.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          1
+        ]
+      ]
+    },
+    "instance_fingerprint": "5747baf2da519403f6a87bbaecf9b9df3163449ee834436115b0517d1075263f",
+    "structural_fingerprint": "6d2cb7150ed5608f6d6bca9d71f94e6d02b2d76489793636b9d071e8841f928b",
+    "selection_order": 19,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "test",
+    "template_id": "M2",
+    "seed": 5175,
+    "instance": {
+      "name": "f1-m2-seed-5175",
+      "task_durations": [
+        4.0,
+        3.0,
+        2.0,
+        3.0,
+        5.0,
+        3.0
+      ],
+      "task_demands": [
+        [
+          4.0,
+          1.0
+        ],
+        [
+          3.0,
+          2.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          3.0,
+          3.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          12.0,
+          12.0
+        ],
+        [
+          8.0,
+          8.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.5
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ]
+    },
+    "instance_fingerprint": "5eafcc7f2a964b73888507d54c0627b2b861c6a26c067c8585000ed6307273aa",
+    "structural_fingerprint": "21b6fd426c549524ab23706c56d9166b846d5413d430da84677e1ee691ec8d90",
+    "selection_order": 20,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F1",
+    "split": "test",
+    "template_id": "M2",
+    "seed": 5176,
+    "instance": {
+      "name": "f1-m2-seed-5176",
+      "task_durations": [
+        3.0,
+        4.0,
+        2.0,
+        4.0,
+        3.0,
+        5.0,
+        4.0
+      ],
+      "task_demands": [
+        [
+          2.0,
+          4.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          3.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          3.0,
+          2.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          12.0,
+          12.0
+        ],
+        [
+          8.0,
+          8.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          5
+        ]
+      ]
+    },
+    "instance_fingerprint": "5dd7f66ba465a591357839cd6640e49eb7263e790725fc384ed7f15ef61866b3",
+    "structural_fingerprint": "74173e04b328ee08910a308c147a4f6e34ed6d4ae54cbf521c408085aef9ddd0",
+    "selection_order": 21,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "train",
+    "template_id": "T0",
+    "seed": 5200,
+    "instance": {
+      "name": "f2-t0-seed-5200",
+      "task_durations": [
+        1.0,
+        3.0,
+        1.0,
+        1.0,
+        1.0,
+        6.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          6.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          14.0,
+          14.0
+        ],
+        [
+          7.0,
+          7.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          3
+        ]
+      ]
+    },
+    "instance_fingerprint": "fc33ebe6ea77efd07763ce9fbc5ecb529e6c800a54bf5a5a3efa2fe11ecd675f",
+    "structural_fingerprint": "a289977968ae6eaa7dd7d9f1763d7df10d839847cebc876713c9ccf378a5dd48",
+    "selection_order": 22,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "train",
+    "template_id": "T0",
+    "seed": 5201,
+    "instance": {
+      "name": "f2-t0-seed-5201",
+      "task_durations": [
+        3.0,
+        1.0,
+        7.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          6.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          7.0,
+          7.0
+        ],
+        [
+          14.0,
+          14.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          6,
+          3
+        ]
+      ]
+    },
+    "instance_fingerprint": "1d342ebc42b8a6b5dd4403039220ddc3c1aa57663d7919c566331c360946f4d4",
+    "structural_fingerprint": "1d5d8fd7ec793180074d25a67bd8e824a1f4741663c4ba891403071dd59f8116",
+    "selection_order": 23,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "train",
+    "template_id": "T0",
+    "seed": 5202,
+    "instance": {
+      "name": "f2-t0-seed-5202",
+      "task_durations": [
+        1.0,
+        5.0,
+        1.0,
+        1.0,
+        1.0,
+        3.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          5.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          14.0,
+          14.0
+        ],
+        [
+          7.0,
+          7.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ]
+    },
+    "instance_fingerprint": "014cde600f76c5b82446d2a1a37334aa215281b98d65236284d7b7f85822cc8d",
+    "structural_fingerprint": "1006abe4dc6fd9a5bcf98a6acf2b2f5c1e4ff42cacd88dc8a968fa714f449482",
+    "selection_order": 24,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "train",
+    "template_id": "T0",
+    "seed": 5203,
+    "instance": {
+      "name": "f2-t0-seed-5203",
+      "task_durations": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        6.0,
+        3.0
+      ],
+      "task_demands": [
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          6.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          7.0,
+          7.0
+        ],
+        [
+          14.0,
+          14.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          0
+        ]
+      ]
+    },
+    "instance_fingerprint": "53310885307c869e98af979d1e2f860e29c7ed714aa78e16e98cb23e3d48d757",
+    "structural_fingerprint": "d96ea57fb0837c0ea1438bea9651335a1f427b4a7d0127f63182ee90b1d7f646",
+    "selection_order": 25,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "train",
+    "template_id": "T1",
+    "seed": 5240,
+    "instance": {
+      "name": "f2-t1-seed-5240",
+      "task_durations": [
+        1.0,
+        7.0,
+        1.0,
+        1.0,
+        1.0,
+        3.0
+      ],
+      "task_demands": [
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          5.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          7.0,
+          7.0
+        ],
+        [
+          14.0,
+          14.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          5,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "7b02642449252374f8624bf186d64d9bb14ef959fb4055ad12cf5c179e416701",
+    "structural_fingerprint": "f63c496a22b33d975a0710725070d38033ef9ce9500b25569cf00d6ad34bebec",
+    "selection_order": 26,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "train",
+    "template_id": "T1",
+    "seed": 5241,
+    "instance": {
+      "name": "f2-t1-seed-5241",
+      "task_durations": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        3.0,
+        5.0
+      ],
+      "task_demands": [
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          7.0,
+          7.0
+        ],
+        [
+          14.0,
+          14.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "3aed48fbc51fde1eaae67f967e1e3d93405b890d4585720dd4ac4b2809ff7093",
+    "structural_fingerprint": "7ae37d0363ce5992b28055030279b56a3c0cbaab958185f62cfd4aff6b79a0e6",
+    "selection_order": 27,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "train",
+    "template_id": "T1",
+    "seed": 5242,
+    "instance": {
+      "name": "f2-t1-seed-5242",
+      "task_durations": [
+        6.0,
+        1.0,
+        3.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          6.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          5.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          7.0,
+          7.0
+        ],
+        [
+          14.0,
+          14.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          3
+        ]
+      ]
+    },
+    "instance_fingerprint": "0c942ecf9a1606f5abc3bb7f9085cfcca71d305686b7dbdf3d9fdc37e24eec06",
+    "structural_fingerprint": "43d6e7cea3999b244bf0e3d650a23b7bfaffab9d901803877ab2b4da2d01e831",
+    "selection_order": 28,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "train",
+    "template_id": "T1",
+    "seed": 5243,
+    "instance": {
+      "name": "f2-t1-seed-5243",
+      "task_durations": [
+        1.0,
+        3.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        7.0
+      ],
+      "task_demands": [
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          14.0,
+          14.0
+        ],
+        [
+          7.0,
+          7.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "395fc9073b51407501c9799f31f08ab5d9cf32c6b1af72dd3459c4722177a8d1",
+    "structural_fingerprint": "f0c44ad6da37ffc0237f5166515ba1f3c7e39f985fad4563b7372347d6dff040",
+    "selection_order": 29,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "validation",
+    "template_id": "T0",
+    "seed": 5282,
+    "instance": {
+      "name": "f2-t0-seed-5282",
+      "task_durations": [
+        3.0,
+        1.0,
+        7.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          5.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          5.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          14.0,
+          14.0
+        ],
+        [
+          7.0,
+          7.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "4024a5918ced4b76a2cfe6d61d644da5377b74f8df2dd556603535ece0c4c147",
+    "structural_fingerprint": "1e1823ae69747927959ad93a0b2937e131ac0ac8115d1384de77baff54113c06",
+    "selection_order": 30,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "validation",
+    "template_id": "T0",
+    "seed": 5283,
+    "instance": {
+      "name": "f2-t0-seed-5283",
+      "task_durations": [
+        5.0,
+        1.0,
+        1.0,
+        3.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          6.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          6.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          7.0,
+          7.0
+        ],
+        [
+          14.0,
+          14.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          4
+        ]
+      ]
+    },
+    "instance_fingerprint": "af710fc628a8ce32fbcdefa2509a3903cf61a4e8605f116448ecb8e4ba90d5f1",
+    "structural_fingerprint": "36081a35d0610adad7c8d54ee40e70f2aa9610725358c5eb4ef3fb3d1a1590b1",
+    "selection_order": 31,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "validation",
+    "template_id": "T1",
+    "seed": 5304,
+    "instance": {
+      "name": "f2-t1-seed-5304",
+      "task_durations": [
+        5.0,
+        1.0,
+        1.0,
+        3.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          14.0,
+          14.0
+        ],
+        [
+          7.0,
+          7.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          0
+        ]
+      ]
+    },
+    "instance_fingerprint": "31449bd299a8b0d0a1fd89a6a7fa8da5dc07a9c7398cd9ffbc5a7dcff1cef78d",
+    "structural_fingerprint": "37ef1505b77a247900150b0184bafb959e8342390cc4a7a740899c6d95e926f1",
+    "selection_order": 32,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "validation",
+    "template_id": "T1",
+    "seed": 5305,
+    "instance": {
+      "name": "f2-t1-seed-5305",
+      "task_durations": [
+        1.0,
+        1.0,
+        3.0,
+        1.0,
+        1.0,
+        6.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          6.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          14.0,
+          14.0
+        ],
+        [
+          7.0,
+          7.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          5
+        ]
+      ]
+    },
+    "instance_fingerprint": "ba3f3000ab0c3619ecd3e87f7d4e40b0e6b67046d7929a71ac50e7ac76eef34c",
+    "structural_fingerprint": "51d3c8e9104aa1940435838a8f79aa8d77ab6397647497d0559cf01d2d9500c6",
+    "selection_order": 33,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5320,
+    "instance": {
+      "name": "f2-t2-seed-5320",
+      "task_durations": [
+        1.0,
+        1.0,
+        6.0,
+        1.0,
+        3.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          5.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          14.0,
+          14.0
+        ],
+        [
+          7.0,
+          7.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          0
+        ]
+      ]
+    },
+    "instance_fingerprint": "35d573d7134dfc525815e0ea9dc84fc5aff0747addcd06944fe1468e3337750e",
+    "structural_fingerprint": "2b44e2b7596869d16adfcc0208c7cb76a491dbd97b2f809e63b1f3a2f2deb2cd",
+    "selection_order": 34,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5321,
+    "instance": {
+      "name": "f2-t2-seed-5321",
+      "task_durations": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        3.0,
+        7.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          14.0,
+          14.0
+        ],
+        [
+          7.0,
+          7.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          4
+        ]
+      ]
+    },
+    "instance_fingerprint": "6ee50210cbd6b6b58e353091710056f6fb85d14ea2351398c82fc4291395b46a",
+    "structural_fingerprint": "89dec7fb2a6f02e45bec7678061bd20a1d9164f656059fa87d502b8951aa8e62",
+    "selection_order": 35,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5322,
+    "instance": {
+      "name": "f2-t2-seed-5322",
+      "task_durations": [
+        3.0,
+        1.0,
+        5.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          5.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          7.0,
+          7.0
+        ],
+        [
+          14.0,
+          14.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.5
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          4
+        ]
+      ]
+    },
+    "instance_fingerprint": "0b41540187b11cb53bb9d60006c73679b37545fa51f7ff2f468d31431d4988e7",
+    "structural_fingerprint": "63ffa97e6102cd29d41ae835f6aa50b8f2f14ed4ecf0194db6ecc69a9afe8585",
+    "selection_order": 36,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5323,
+    "instance": {
+      "name": "f2-t2-seed-5323",
+      "task_durations": [
+        6.0,
+        1.0,
+        1.0,
+        3.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          5.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          5.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          14.0,
+          14.0
+        ],
+        [
+          7.0,
+          7.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "f694d2ea55423fa66abb380be19c187921d89002b2a9fa015bf1902c70c01802",
+    "structural_fingerprint": "f77b39a61623c63dfcd777a7896e0a22a50996677f32356cc4eda9faf4d42755",
+    "selection_order": 37,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5324,
+    "instance": {
+      "name": "f2-t2-seed-5324",
+      "task_durations": [
+        1.0,
+        7.0,
+        1.0,
+        3.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          7.0,
+          7.0
+        ],
+        [
+          14.0,
+          14.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "edges": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ]
+    },
+    "instance_fingerprint": "1ed9972b61ddc2d507d4082d92e207d9817788ad326ca4f15cc5e4489d3371b6",
+    "structural_fingerprint": "4dbbdecb920b5438c4c10e09fe3aa4ba703b2d5ce5a43007490256f4809dd1e5",
+    "selection_order": 38,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5325,
+    "instance": {
+      "name": "f2-t2-seed-5325",
+      "task_durations": [
+        1.0,
+        3.0,
+        1.0,
+        5.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          6.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          14.0,
+          14.0
+        ],
+        [
+          7.0,
+          7.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "e86d5a26c0c081d9bfc8d867914e9e0510ce6072f11079a5791607749c218dd0",
+    "structural_fingerprint": "2aebe9dd1ea4be4bf2adf09f726be47219083ad0b624a6b49793e042d70fc6df",
+    "selection_order": 39,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "train",
+    "template_id": "T0",
+    "seed": 5400,
+    "instance": {
+      "name": "f3-t0-seed-5400",
+      "task_durations": [
+        1.0,
+        1.0,
+        1.0,
+        8.0,
+        1.0,
+        8.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          5,
+          4
+        ]
+      ]
+    },
+    "instance_fingerprint": "cb76791d44a60bb15f71b082d33300597b8d4eb99c9b51010e5e4464c387b9a7",
+    "structural_fingerprint": "64184eb9bf4948d001d23ce7705a18512f2c1467f243ecb879816046475c437e",
+    "selection_order": 40,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "train",
+    "template_id": "T0",
+    "seed": 5401,
+    "instance": {
+      "name": "f3-t0-seed-5401",
+      "task_durations": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        9.0,
+        8.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          3
+        ]
+      ]
+    },
+    "instance_fingerprint": "0a0fdaf7404b3d8ff8977ef42d6d621eeca36c661f913aaf70bef3ddcbe2e83f",
+    "structural_fingerprint": "beee6d3b15901747bb49430e939d48cffac618955ff7d278dba07ed828e4d732",
+    "selection_order": 41,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "train",
+    "template_id": "T0",
+    "seed": 5402,
+    "instance": {
+      "name": "f3-t0-seed-5402",
+      "task_durations": [
+        1.0,
+        1.0,
+        8.0,
+        1.0,
+        1.0,
+        10.0
+      ],
+      "task_demands": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          0
+        ]
+      ]
+    },
+    "instance_fingerprint": "fa69e6b2e2919a1bac93a00fe23e5fa8102c6536137fe6d880886c8c9d40b58f",
+    "structural_fingerprint": "655815f456d4c47614fc2b0bcde1807d9dc821665e5ef8170996a775c91df7c7",
+    "selection_order": 42,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "train",
+    "template_id": "T0",
+    "seed": 5403,
+    "instance": {
+      "name": "f3-t0-seed-5403",
+      "task_durations": [
+        1.0,
+        1.0,
+        1.0,
+        11.0,
+        9.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          4
+        ]
+      ]
+    },
+    "instance_fingerprint": "0b7dc026b80b47aa5e346b06b93356047ebbc4f6d96548f83c805492699d84f4",
+    "structural_fingerprint": "53e1daa6c1e79ddf726b8808cdfe3309578947fe7a9e3c575f45d72fee76b0ba",
+    "selection_order": 43,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "train",
+    "template_id": "T1",
+    "seed": 5440,
+    "instance": {
+      "name": "f3-t1-seed-5440",
+      "task_durations": [
+        1.0,
+        9.0,
+        1.0,
+        8.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "f78294a4d07da16e2867f882e560f6f0c0b3b1f6c5fc8ef2d04d7766e42cd878",
+    "structural_fingerprint": "ae9c69ac14964b2bd25c9358b97c482c5476e02e5ea76c6abb3f11061dbac3d6",
+    "selection_order": 44,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "train",
+    "template_id": "T1",
+    "seed": 5441,
+    "instance": {
+      "name": "f3-t1-seed-5441",
+      "task_durations": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        9.0,
+        9.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "98b3618f4b40f5c6e0f214d3eb2dcf21ae43e834f051c31c1e213e4cddbba71d",
+    "structural_fingerprint": "48e42e48c50580540498d02de3f5499564ee7851703811dbef93b2be1f06a2e0",
+    "selection_order": 45,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "train",
+    "template_id": "T1",
+    "seed": 5442,
+    "instance": {
+      "name": "f3-t1-seed-5442",
+      "task_durations": [
+        1.0,
+        10.0,
+        1.0,
+        10.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ]
+    },
+    "instance_fingerprint": "745cbdcb04b72042e2dea1fa525a282d696038573897412879525a79d5f02267",
+    "structural_fingerprint": "05063118ab092039cdf6134cb2bc72fb0a9872a05ff067f220377d9b1169902e",
+    "selection_order": 46,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "train",
+    "template_id": "T1",
+    "seed": 5443,
+    "instance": {
+      "name": "f3-t1-seed-5443",
+      "task_durations": [
+        1.0,
+        1.0,
+        1.0,
+        10.0,
+        11.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "a3bb580fd68b816b1e46840a4ac280ad12d66bb042d580ef91737d3b1de927d9",
+    "structural_fingerprint": "8871f62141db43ef0e8d2f788bc8847db0640f6ae57517f3e02c8c899a224a01",
+    "selection_order": 47,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "validation",
+    "template_id": "T0",
+    "seed": 5480,
+    "instance": {
+      "name": "f3-t0-seed-5480",
+      "task_durations": [
+        1.0,
+        1.0,
+        10.0,
+        8.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "44fe9962d2969425505832dc6723486b875adecc169800b9b31f94b1d0c42f50",
+    "structural_fingerprint": "3d42523467c4ae2dba87574c38e9d6ea9243916c9a4cdc16d2b1355343325760",
+    "selection_order": 48,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "validation",
+    "template_id": "T0",
+    "seed": 5481,
+    "instance": {
+      "name": "f3-t0-seed-5481",
+      "task_durations": [
+        1.0,
+        1.0,
+        11.0,
+        1.0,
+        9.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "dcd9603bfe18ad0bda8872356d6c598b24bb64b8501310592a7e8a5241927deb",
+    "structural_fingerprint": "785e203040094115e7d33ae25265c7649fd6fc9eb2d136e13f48235228c25b59",
+    "selection_order": 49,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "validation",
+    "template_id": "T1",
+    "seed": 5504,
+    "instance": {
+      "name": "f3-t1-seed-5504",
+      "task_durations": [
+        1.0,
+        10.0,
+        1.0,
+        8.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    "instance_fingerprint": "b6fdc0e64b129a324e421248a985795a9333105175a8b09d6cc8d58379384826",
+    "structural_fingerprint": "9d4414138536ee5a24023040410f93cd4a2dff329a9e6de6ee25ece1c6aa5895",
+    "selection_order": 50,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "validation",
+    "template_id": "T1",
+    "seed": 5505,
+    "instance": {
+      "name": "f3-t1-seed-5505",
+      "task_durations": [
+        1.0,
+        11.0,
+        1.0,
+        1.0,
+        9.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          5
+        ]
+      ]
+    },
+    "instance_fingerprint": "d72a69c6e911f94c9cbb6d992e23a3d28243aacf9b17e036a558eb127a8379a6",
+    "structural_fingerprint": "3b1c3968cb25bf04884372835c839b7562d70a88c5fa0513f0a385e04596a798",
+    "selection_order": 51,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5520,
+    "instance": {
+      "name": "f3-t2-seed-5520",
+      "task_durations": [
+        1.0,
+        8.0,
+        8.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          1
+        ]
+      ]
+    },
+    "instance_fingerprint": "25a4e235dfd4f8f9840de346d1cf6c3aa4b377e0dcbec03ce78b6469057dc862",
+    "structural_fingerprint": "5efe8d6b841d40020b43091343d175aab651e1074d81dc1b120cb010497e1ff5",
+    "selection_order": 52,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5521,
+    "instance": {
+      "name": "f3-t2-seed-5521",
+      "task_durations": [
+        1.0,
+        1.0,
+        1.0,
+        8.0,
+        1.0,
+        1.0,
+        9.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          1
+        ]
+      ]
+    },
+    "instance_fingerprint": "9b6b54b0cce2f210c4a68e1f3675692b6a025b5f3bd0d461aba88c31472c57df",
+    "structural_fingerprint": "6517b246b8f1da7be9f97af6204adc401675910d570e047660313242ac0411b6",
+    "selection_order": 53,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5522,
+    "instance": {
+      "name": "f3-t2-seed-5522",
+      "task_durations": [
+        1.0,
+        1.0,
+        10.0,
+        1.0,
+        1.0,
+        8.0
+      ],
+      "task_demands": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ]
+    },
+    "instance_fingerprint": "c43e53bce6d9a309a18f24e10b6d09a9bae945f9843167cd255fa6aeda0ed9e6",
+    "structural_fingerprint": "8a77e0b68f96b8803777356c208992f0ce581c0aa57b1ee689fdba7c36e747d0",
+    "selection_order": 54,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5523,
+    "instance": {
+      "name": "f3-t2-seed-5523",
+      "task_durations": [
+        9.0,
+        11.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    "instance_fingerprint": "a644d41fb4aba6240dfe5f07cdf30c7ad5080f3cd623bbdbd02bf631c8f46f5c",
+    "structural_fingerprint": "09e26d9d4727e9353e034eb9a6a53d55fc8dc71bfcffef7a89816fbcc1c60ab9",
+    "selection_order": 55,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5525,
+    "instance": {
+      "name": "f3-t2-seed-5525",
+      "task_durations": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        9.0,
+        1.0,
+        9.0
+      ],
+      "task_demands": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          6,
+          1
+        ]
+      ]
+    },
+    "instance_fingerprint": "9ab9fdf4a0752309b9f5b316d2079e4c4038db49752b9d0a0a339126e4c15d0d",
+    "structural_fingerprint": "f0045cda47b3ba3d157575926e213cd7e9f59338e4a3d82a6f4034aa0b4e26b0",
+    "selection_order": 56,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5527,
+    "instance": {
+      "name": "f3-t2-seed-5527",
+      "task_durations": [
+        1.0,
+        10.0,
+        1.0,
+        1.0,
+        1.0,
+        11.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ]
+      ]
+    },
+    "instance_fingerprint": "f395963bdd2bf8bff7e3045119a665737d619d1cfbbdb111d4621ff6deb58e1e",
+    "structural_fingerprint": "2def29ed14d8b5af4e9c388b526d2a95a26e7c0fd2671b5a56820d6850b0ff00",
+    "selection_order": 57,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5529,
+    "instance": {
+      "name": "f3-t2-seed-5529",
+      "task_durations": [
+        1.0,
+        11.0,
+        1.0,
+        1.0,
+        1.0,
+        9.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          0
+        ]
+      ]
+    },
+    "instance_fingerprint": "9f2699dedf48465dafa38e223b3e8c692bf8239cb361c3e7d9adf2cba98dfa90",
+    "structural_fingerprint": "b9d066426b84212e4122bd110fa9c6773eb135bf7cbb389029ca103b87ebc0ac",
+    "selection_order": 58,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5530,
+    "instance": {
+      "name": "f3-t2-seed-5530",
+      "task_durations": [
+        1.0,
+        11.0,
+        1.0,
+        1.0,
+        10.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          3
+        ]
+      ]
+    },
+    "instance_fingerprint": "0b08823f62431c84f5b3664350d52e4e1222e95f650dc578e6851e2a9019c755",
+    "structural_fingerprint": "6bc1af4f745985cdba6284f92956c90c51b8f3e06c5d00fea7e5d3626947d460",
+    "selection_order": 59,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F3",
+    "split": "test",
+    "template_id": "T2",
+    "seed": 5531,
+    "instance": {
+      "name": "f3-t2-seed-5531",
+      "task_durations": [
+        1.0,
+        1.0,
+        11.0,
+        11.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          4
+        ]
+      ]
+    },
+    "instance_fingerprint": "322f23250ad74559d122b715a03e4802b6dfbbdc00ba61e0cca462235a7da441",
+    "structural_fingerprint": "07e3098309e4e0c3b14311e327ab23a361923cd41c1b463fa71192c2ffba286d",
+    "selection_order": 60,
+    "generator_version": "phase16-v1",
+    "source_audit_version": "phase16-v1"
+  },
+  {
+    "family": "F2",
+    "split": "test",
+    "template_id": "T2-v2",
+    "seed": 6001,
+    "instance": {
+      "name": "f2-t2-v2-seed-6001",
+      "task_durations": [
+        7.0,
+        2.0,
+        3.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          6.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          14.0,
+          14.0
+        ],
+        [
+          7.0,
+          7.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          1
+        ]
+      ]
+    },
+    "instance_fingerprint": "913440f0a0ef1a04ba9471caa058531a9acf597894abbda7cfd6d205ceb075ca",
+    "structural_fingerprint": "304a520fa02d04bcee1cbb4322c49447092f070623eda26e0f7ca421ffe8baa3",
+    "generator_version": "phase16-t2-v2-generator-1",
+    "source_audit_version": "phase16-t2-supplement-v2"
+  },
+  {
+    "family": "F2",
+    "split": "test",
+    "template_id": "T2-v2",
+    "seed": 6036,
+    "instance": {
+      "name": "f2-t2-v2-seed-6036",
+      "task_durations": [
+        1.0,
+        2.0,
+        4.0,
+        2.0,
+        8.0,
+        2.0
+      ],
+      "task_demands": [
+        [
+          0.0,
+          6.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          5.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          14.0,
+          14.0
+        ],
+        [
+          7.0,
+          7.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          4
+        ]
+      ]
+    },
+    "instance_fingerprint": "93208f06559114c15bae04c6d5ae252a3f8e4e96b0ba1b1b366b9647a2b044d9",
+    "structural_fingerprint": "12bca9b50ca9f10837839ed3aec15d3fb69352dde8a4e3c986f0b7dbe84fc960",
+    "generator_version": "phase16-t2-v2-generator-1",
+    "source_audit_version": "phase16-t2-supplement-v2"
+  },
+  {
+    "family": "F2",
+    "split": "test",
+    "template_id": "T2-v2",
+    "seed": 6041,
+    "instance": {
+      "name": "f2-t2-v2-seed-6041",
+      "task_durations": [
+        2.0,
+        2.0,
+        2.0,
+        8.0,
+        2.0,
+        4.0
+      ],
+      "task_demands": [
+        [
+          5.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          5.0
+        ],
+        [
+          5.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          14.0,
+          14.0
+        ],
+        [
+          7.0,
+          7.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ]
+    },
+    "instance_fingerprint": "34d17469b8be6fe25fa8807a7ab735e0401f43c3b6c041819b4454314da2a512",
+    "structural_fingerprint": "eb8454cdb7c738030e1f81f029ba216838019a043ddb73aabeaf83b4004b81ea",
+    "generator_version": "phase16-t2-v2-generator-1",
+    "source_audit_version": "phase16-t2-supplement-v2"
+  },
+  {
+    "family": "F2",
+    "split": "test",
+    "template_id": "T2-v2",
+    "seed": 6048,
+    "instance": {
+      "name": "f2-t2-v2-seed-6048",
+      "task_durations": [
+        1.0,
+        1.0,
+        1.0,
+        3.0,
+        1.0,
+        7.0,
+        1.0
+      ],
+      "task_demands": [
+        [
+          5.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          6.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          7.0,
+          7.0
+        ],
+        [
+          14.0,
+          14.0
+        ]
+      ],
+      "compatibility": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.5
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    "instance_fingerprint": "44f5ea50867a94d1d6b899f48532e0e843f7eec0b2bbc1c2e2482cf3dda7946e",
+    "structural_fingerprint": "f5f422f5311f2aeeee3b82bddfe3d8698632df158c8c4ca31918d4f842b2a782",
+    "generator_version": "phase16-t2-v2-generator-1",
+    "source_audit_version": "phase16-t2-supplement-v2"
+  },
+  {
+    "family": "F3",
+    "split": "test",
+    "template_id": "T2-v2",
+    "seed": 6100,
+    "instance": {
+      "name": "f3-t2-v2-seed-6100",
+      "task_durations": [
+        2.0,
+        1.0,
+        1.0,
+        10.0,
+        12.0,
+        2.0
+      ],
+      "task_demands": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "pool_capacities": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "compatibility": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          1
+        ]
+      ]
+    },
+    "instance_fingerprint": "97e64bf0cede27833a43fea45d8db6f8abeb21adb9a37043f2846f3a11fa605f",
+    "structural_fingerprint": "2454f30511dbc2b59c4af6f9c1ff33954972902bf25585b5806fe5b24b39ad60",
+    "generator_version": "phase16-t2-v2-generator-1",
+    "source_audit_version": "phase16-t2-supplement-v2"
+  }
+]

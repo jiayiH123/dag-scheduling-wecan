@@ -1,0 +1,1125 @@
+{
+  "seed": 4002,
+  "config_hash": "87d2a192e8b9a49809040feb2735170f2c34290dd332863a445835f4155ee9de",
+  "instance": {
+    "name": "a1b-exact-seed-4002",
+    "task_durations": [
+      1.0,
+      3.0,
+      1.0,
+      5.0,
+      1.0,
+      1.0
+    ],
+    "task_demands": [
+      [
+        0.0,
+        6.0
+      ],
+      [
+        6.0,
+        0.0
+      ],
+      [
+        6.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.0
+      ],
+      [
+        6.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.0
+      ]
+    ],
+    "pool_capacities": [
+      [
+        7.0,
+        7.0
+      ],
+      [
+        14.0,
+        14.0
+      ]
+    ],
+    "compatibility": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.5
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0
+      ]
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        1,
+        4
+      ]
+    ]
+  },
+  "milp": {
+    "status": "optimal",
+    "makespan": 8.0,
+    "schedule": {
+      "makespan": 8.0,
+      "placements": [
+        {
+          "task": 0,
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0
+        },
+        {
+          "task": 1,
+          "pool": 1,
+          "start": 0.0,
+          "end": 6.0
+        },
+        {
+          "task": 2,
+          "pool": 0,
+          "start": 1.0,
+          "end": 2.0
+        },
+        {
+          "task": 3,
+          "pool": 0,
+          "start": 2.0,
+          "end": 7.0
+        },
+        {
+          "task": 4,
+          "pool": 1,
+          "start": 6.0,
+          "end": 7.0
+        },
+        {
+          "task": 5,
+          "pool": 0,
+          "start": 7.0,
+          "end": 8.0
+        }
+      ]
+    },
+    "time_scale": 2,
+    "wall_seconds": 0.05683212005533278,
+    "validator": {
+      "feasible": true,
+      "violations": [],
+      "interval_usages": [
+        {
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 1.0,
+          "end": 2.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 2.0,
+          "end": 6.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 6.0,
+          "end": 7.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 7.0,
+          "end": 8.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 1.0,
+          "end": 2.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 2.0,
+          "end": 6.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 6.0,
+          "end": 7.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 7.0,
+          "end": 8.0,
+          "usage": [
+            0.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        }
+      ],
+      "trace_checked": false
+    },
+    "detail": {
+      "pulp_status": "Optimal",
+      "horizon_ticks": 24,
+      "time_scale": 2,
+      "log_path": "/tmp/phase15_cbc_h9_mgmlq/a1b-exact-seed-4002.cbc.log",
+      "cbc_audit": {
+        "proven_optimal": true,
+        "time_limit_reached": false,
+        "node_limit_reached": false,
+        "solution_limit_reached": false,
+        "abnormal_termination": false,
+        "incumbent": 16.0,
+        "best_bound": null,
+        "gap": null,
+        "gap_ok": true,
+        "bound_ok": true,
+        "log_present": true,
+        "pulp_status": "Optimal"
+      },
+      "serial_upper_bound_ticks": 24,
+      "objective_ticks": 16.0,
+      "recovered_assignment": {
+        "0": 0,
+        "1": 1,
+        "2": 0,
+        "3": 0,
+        "4": 1,
+        "5": 0
+      }
+    }
+  },
+  "exhaustive_with_wait": {
+    "status": "optimal",
+    "makespan": 8.0,
+    "schedule": {
+      "makespan": 8.0,
+      "placements": [
+        {
+          "task": 0,
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0
+        },
+        {
+          "task": 1,
+          "pool": 1,
+          "start": 0.0,
+          "end": 6.0
+        },
+        {
+          "task": 2,
+          "pool": 0,
+          "start": 1.0,
+          "end": 2.0
+        },
+        {
+          "task": 3,
+          "pool": 0,
+          "start": 2.0,
+          "end": 7.0
+        },
+        {
+          "task": 4,
+          "pool": 1,
+          "start": 6.0,
+          "end": 7.0
+        },
+        {
+          "task": 5,
+          "pool": 0,
+          "start": 7.0,
+          "end": 8.0
+        }
+      ]
+    },
+    "time_scale": 2,
+    "wall_seconds": 0.004040756030008197,
+    "validator": {
+      "feasible": true,
+      "violations": [],
+      "interval_usages": [
+        {
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 1.0,
+          "end": 2.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 2.0,
+          "end": 6.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 6.0,
+          "end": 7.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 7.0,
+          "end": 8.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 1.0,
+          "end": 2.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 2.0,
+          "end": 6.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 6.0,
+          "end": 7.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 7.0,
+          "end": 8.0,
+          "usage": [
+            0.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        }
+      ],
+      "trace_checked": true
+    },
+    "detail": {
+      "search_nodes": 149,
+      "pruned_nodes": 51,
+      "complete_search": true,
+      "unique_canonical_states": 92,
+      "allow_active_wait": true,
+      "history": [
+        "dispatch:0:0",
+        "dispatch:1:1",
+        "skip",
+        "dispatch:2:0",
+        "skip",
+        "dispatch:3:0",
+        "skip",
+        "dispatch:4:1",
+        "skip",
+        "dispatch:5:0"
+      ],
+      "active_wait_indices": [],
+      "contains_active_wait": false,
+      "assignment": {
+        "0": 0,
+        "1": 1,
+        "2": 0,
+        "3": 0,
+        "4": 1,
+        "5": 0
+      }
+    }
+  },
+  "exhaustive_without_wait": {
+    "status": "optimal",
+    "makespan": 8.0,
+    "schedule": {
+      "makespan": 8.0,
+      "placements": [
+        {
+          "task": 0,
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0
+        },
+        {
+          "task": 1,
+          "pool": 1,
+          "start": 0.0,
+          "end": 6.0
+        },
+        {
+          "task": 2,
+          "pool": 0,
+          "start": 1.0,
+          "end": 2.0
+        },
+        {
+          "task": 3,
+          "pool": 0,
+          "start": 2.0,
+          "end": 7.0
+        },
+        {
+          "task": 4,
+          "pool": 1,
+          "start": 6.0,
+          "end": 7.0
+        },
+        {
+          "task": 5,
+          "pool": 0,
+          "start": 7.0,
+          "end": 8.0
+        }
+      ]
+    },
+    "time_scale": 2,
+    "wall_seconds": 0.0008825559634715319,
+    "validator": {
+      "feasible": true,
+      "violations": [],
+      "interval_usages": [
+        {
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 1.0,
+          "end": 2.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 2.0,
+          "end": 6.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 6.0,
+          "end": 7.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 7.0,
+          "end": 8.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 1.0,
+          "end": 2.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 2.0,
+          "end": 6.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 6.0,
+          "end": 7.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 7.0,
+          "end": 8.0,
+          "usage": [
+            0.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        }
+      ],
+      "trace_checked": true
+    },
+    "detail": {
+      "search_nodes": 24,
+      "pruned_nodes": 3,
+      "complete_search": true,
+      "unique_canonical_states": 19,
+      "allow_active_wait": false,
+      "history": [
+        "dispatch:0:0",
+        "dispatch:1:1",
+        "skip",
+        "dispatch:2:0",
+        "skip",
+        "dispatch:3:0",
+        "skip",
+        "dispatch:4:1",
+        "skip",
+        "dispatch:5:0"
+      ],
+      "active_wait_indices": [],
+      "contains_active_wait": false,
+      "assignment": {
+        "0": 0,
+        "1": 1,
+        "2": 0,
+        "3": 0,
+        "4": 1,
+        "5": 0
+      }
+    }
+  },
+  "external_greedy": {
+    "schedule": {
+      "makespan": 10.0,
+      "placements": [
+        {
+          "task": 0,
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0
+        },
+        {
+          "task": 1,
+          "pool": 0,
+          "start": 0.0,
+          "end": 3.0
+        },
+        {
+          "task": 2,
+          "pool": 0,
+          "start": 3.0,
+          "end": 4.0
+        },
+        {
+          "task": 3,
+          "pool": 0,
+          "start": 4.0,
+          "end": 9.0
+        },
+        {
+          "task": 4,
+          "pool": 1,
+          "start": 3.0,
+          "end": 4.0
+        },
+        {
+          "task": 5,
+          "pool": 0,
+          "start": 9.0,
+          "end": 10.0
+        }
+      ]
+    },
+    "validator": {
+      "feasible": true,
+      "violations": [],
+      "interval_usages": [
+        {
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            6.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 1.0,
+          "end": 3.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 3.0,
+          "end": 4.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 4.0,
+          "end": 9.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 9.0,
+          "end": 10.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            0.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 1.0,
+          "end": 3.0,
+          "usage": [
+            0.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 3.0,
+          "end": 4.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 4.0,
+          "end": 9.0,
+          "usage": [
+            0.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 9.0,
+          "end": 10.0,
+          "usage": [
+            0.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        }
+      ],
+      "trace_checked": false
+    }
+  },
+  "ca_heft": {
+    "schedule": {
+      "makespan": 8.0,
+      "placements": [
+        {
+          "task": 0,
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0
+        },
+        {
+          "task": 1,
+          "pool": 0,
+          "start": 2.0,
+          "end": 5.0
+        },
+        {
+          "task": 2,
+          "pool": 0,
+          "start": 1.0,
+          "end": 2.0
+        },
+        {
+          "task": 3,
+          "pool": 0,
+          "start": 2.0,
+          "end": 7.0
+        },
+        {
+          "task": 4,
+          "pool": 1,
+          "start": 5.0,
+          "end": 6.0
+        },
+        {
+          "task": 5,
+          "pool": 0,
+          "start": 7.0,
+          "end": 8.0
+        }
+      ]
+    },
+    "validator": {
+      "feasible": true,
+      "violations": [],
+      "interval_usages": [
+        {
+          "pool": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 1.0,
+          "end": 2.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 2.0,
+          "end": 5.0,
+          "usage": [
+            6.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 5.0,
+          "end": 6.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 6.0,
+          "end": 7.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 0,
+          "start": 7.0,
+          "end": 8.0,
+          "usage": [
+            0.0,
+            6.0
+          ],
+          "capacity": [
+            7.0,
+            7.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 0.0,
+          "end": 1.0,
+          "usage": [
+            0.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 1.0,
+          "end": 2.0,
+          "usage": [
+            0.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 2.0,
+          "end": 5.0,
+          "usage": [
+            0.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 5.0,
+          "end": 6.0,
+          "usage": [
+            6.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 6.0,
+          "end": 7.0,
+          "usage": [
+            0.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        },
+        {
+          "pool": 1,
+          "start": 7.0,
+          "end": 8.0,
+          "usage": [
+            0.0,
+            0.0
+          ],
+          "capacity": [
+            14.0,
+            14.0
+          ]
+        }
+      ],
+      "trace_checked": false
+    }
+  },
+  "external_greedy_relative_gap": 0.25,
+  "external_greedy_absolute_gap_ticks": 2.0,
+  "accepted": true,
+  "rejection_reasons": []
+}

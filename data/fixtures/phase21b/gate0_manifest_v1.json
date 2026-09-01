@@ -1,0 +1,159 @@
+{
+  "schema": "phase21b-gate0-manifest-v1",
+  "communication_semantics": "phase21a-integer-noncompetitive-v1",
+  "communication_structural_fingerprint_version": "phase21b-communication-structural-v1",
+  "records": [
+    {
+      "id": "C1",
+      "split": "train",
+      "family": "chain-colocation",
+      "fixture_path": "data/fixtures/phase2/p2a_communication_tradeoff.json",
+      "expected": {
+        "milp": 5.0,
+        "with_active_wait": 5.0,
+        "without_active_wait": 5.0,
+        "duration_only_greedy": 12.0,
+        "communication_aware_myopic_greedy": 5.0
+      },
+      "requires_active_wait": false,
+      "fixture_sha256": "996db947c2496efbaaf38a3e653b966f192a807a89068954ff617ea7d00df6c8",
+      "canonical_payload_sha256": "e6251b2dd2939123c740d8d1fdc4df391b4351efa5bb465d88c25adaaeb48d3d",
+      "structural_fingerprint": "dfac41ff8babb8b49aae330f664fa8238b3ea5097e188284f2d9d44e9e3ca572"
+    },
+    {
+      "id": "C2",
+      "split": "train",
+      "family": "directed-chain",
+      "fixture_path": "data/fixtures/phase21b/c2_directed_chain.json",
+      "expected": {
+        "milp": 6.0,
+        "with_active_wait": 6.0,
+        "without_active_wait": 6.0,
+        "duration_only_greedy": 10.0,
+        "communication_aware_myopic_greedy": 6.0
+      },
+      "requires_active_wait": false,
+      "fixture_sha256": "53da98dc1b948addb4c1cb0146eafb862f71d736c9cddea99869da2035f2b309",
+      "canonical_payload_sha256": "4c3027d127b99e24f1a8edbcf8d60245567c5c97b3a7c6bb0b431dc569f9952f",
+      "structural_fingerprint": "9ee87674f0c21bef45bbe1ddc744df5e91799db594fa4491168dfcf338b4edbf"
+    },
+    {
+      "id": "C3",
+      "split": "validation",
+      "family": "fan-in",
+      "fixture_path": "data/fixtures/phase21b/c3_fan_in.json",
+      "expected": {
+        "milp": 5.0,
+        "with_active_wait": 5.0,
+        "without_active_wait": 5.0,
+        "duration_only_greedy": 6.0,
+        "communication_aware_myopic_greedy": 6.0
+      },
+      "requires_active_wait": false,
+      "fixture_sha256": "f77b3052b881a695271553b939a1a191af74baaf8b3e1ed2f6a635486d9acc8e",
+      "canonical_payload_sha256": "81985afb273706920bdc00bfd1f0887b901579bee27aab517263c6a964f28cad",
+      "structural_fingerprint": "a1b98e7d211f70016080901f6cc0bf73458fb25c4cd5067975f5dae742051a85"
+    },
+    {
+      "id": "C4",
+      "split": "test",
+      "family": "communication-overlap",
+      "fixture_path": "data/fixtures/phase21b/c4_communication_overlap.json",
+      "expected": {
+        "milp": 5.0,
+        "with_active_wait": 5.0,
+        "without_active_wait": 5.0,
+        "duration_only_greedy": 5.0,
+        "communication_aware_myopic_greedy": 5.0
+      },
+      "requires_active_wait": false,
+      "witness": {
+        "communication_release_tick": 4.0,
+        "overlap_task": 2,
+        "overlap_interval": [
+          4.0,
+          5.0
+        ],
+        "release_task": 1
+      },
+      "fixture_sha256": "02351014acbf8a843c003765f4ae626d474fc65a5e95059b95963f5f66e3a41d",
+      "canonical_payload_sha256": "66d4cdc0410a1e6539e4886855d64c8e7b5ff732bcdf94e6c86f41cc5ccf375c",
+      "structural_fingerprint": "59084bf8de0124bb247a6931e3f1a2ecba877457e5ac4bf9d5a4c6818c0e4215"
+    },
+    {
+      "id": "C5",
+      "split": "test",
+      "family": "zero-data-diamond",
+      "fixture_path": "data/fixtures/phase21b/c5_zero_data_diamond.json",
+      "expected": {
+        "milp": 4.0,
+        "with_active_wait": 4.0,
+        "without_active_wait": 4.0,
+        "duration_only_greedy": 4.0,
+        "communication_aware_myopic_greedy": 4.0
+      },
+      "requires_active_wait": false,
+      "fixture_sha256": "097e3eafdf06ca5330c60eb147828f1c00a51b38c5ecd3d656d65c2e4e37ed4c",
+      "canonical_payload_sha256": "e54bf7f6b577aa97bccc75b26e74b70c1e0b472d43d2764a68f70019c2ea71b5",
+      "structural_fingerprint": "888acde8874d7b2476e0726b7008a490aea7c5754d830bce5ded8861f401b067"
+    },
+    {
+      "id": "C6",
+      "split": "test",
+      "family": "forced-cross-pool-chain",
+      "fixture_path": "data/fixtures/phase21b/c6_forced_cross_pool_chain.json",
+      "expected": {
+        "milp": 7.0,
+        "with_active_wait": 7.0,
+        "without_active_wait": 7.0,
+        "duration_only_greedy": 7.0,
+        "communication_aware_myopic_greedy": 7.0
+      },
+      "requires_active_wait": false,
+      "fixture_sha256": "f815ee636d1123c39700d61252bad4a3a0fb8a7e1ed2060ced760241f013aad3",
+      "canonical_payload_sha256": "03bd7ffcda655d66060adbe37b3792cead07c9bbe65f5eca016728beef4a2dab",
+      "structural_fingerprint": "42aa70c08d018fc814dc448f00566ef8a3c3e56f7e0bf75eb2f5cb7da7817e8c"
+    },
+    {
+      "id": "C7",
+      "split": "development_exact_diagnostic",
+      "family": "fan-out-colocation",
+      "fixture_path": "data/fixtures/phase21b/c7_fan_out_colocation.json",
+      "expected": {
+        "milp": 6.0,
+        "with_active_wait": 6.0,
+        "without_active_wait": 6.0,
+        "duration_only_greedy": 13.0,
+        "communication_aware_myopic_greedy": 9.0
+      },
+      "requires_active_wait": false,
+      "fixture_sha256": "0566883125c9dbe10865cdd22731a7ed38cf75f4d567ba2f7f98411779573e5b",
+      "canonical_payload_sha256": "247d44a8bf26dbaa1df4e3a13ac4a50c2a6bca08b5274a3da996189bd4355a9e",
+      "structural_fingerprint": "f56ffd1bf1ba34c2da525faf437175e8a132615dfccfa3b0a3984b649b8f832d",
+      "use_restrictions": {
+        "training": false,
+        "validation": false,
+        "checkpoint_selection": false,
+        "final_blind_test": false,
+        "long_term_role": "communication_allocation_semantic_regression"
+      }
+    },
+    {
+      "id": "CW",
+      "split": "test",
+      "family": "active-wait-distractor",
+      "fixture_path": "data/fixtures/phase21b/cw_active_wait_distractor.json",
+      "expected": {
+        "milp": 10.0,
+        "with_active_wait": 10.0,
+        "without_active_wait": 11.0,
+        "duration_only_greedy": 11.0,
+        "communication_aware_myopic_greedy": 11.0
+      },
+      "requires_active_wait": true,
+      "fixture_sha256": "3e14d06665b44e52d8e6832f397544e4e5dcf74c8a698521e132a031712e1be6",
+      "canonical_payload_sha256": "2618a9d04aed7f55559bbc4c1d21c01c871a3c778788b5c6838c8d4245fdb799",
+      "structural_fingerprint": "85065b0835fe6d91997d732d353e36a27d42f0906f1a0f6c3b01c96e9be42a94"
+    }
+  ]
+}
