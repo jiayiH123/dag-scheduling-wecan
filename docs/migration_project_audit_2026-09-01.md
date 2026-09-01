@@ -484,9 +484,9 @@ results/diagnostics/A1-c-train/checkpoint/{best,last}.pt
 
 ## 8. 迁移一致性问题与风险
 
-### 8.1 原 Git 历史仍丢失，新的管理基线已初始化
+### 8.1 原 Git 历史仍丢失，新的管理基线已推送到远程
 
-当前已能在新初始化的本地仓库执行 `git status/add/commit`，但原历史仍无法通过 `log/diff/checkout` 访问。`.claude/worktrees/*/.git` 都只是文本指针，指向迁移前的：
+当前迁移快照已经建立新的 Git 历史，并推送到私有远程仓库 `git@github.com:jiayiH123/dag-scheduling-wecan.git`。后续变更已有可回退、可同步的管理基线，但原历史仍无法通过 `log/diff/checkout` 访问。`.claude/worktrees/*/.git` 都只是文本指针，指向迁移前的：
 
 ```text
 /mnt/volumes/.../dag_0729/.git/worktrees/...
@@ -634,7 +634,7 @@ data/phase21c_master_generator.py
 
 可以把项目对外/对自己的当前状态统一写成：
 
-> 已完成 WeCAN faithful reimplementation、论文参数配置、论文风格 500-task synthetic generator、独立 Validator 与双 Oracle 正确性基础设施，并完成 Generator topology cache 的语义等价加速。Phase 1.6 冻结数据、训练权重和核心验收产物已按 manifest 完整恢复，并已初始化新的本地 Git 管理基线。当前论文规模训练仍受逐 rollout Generator 和逐实例 trainer 吞吐限制，第二轮 `_dispatch_mask` correctness-preserving short-circuit 尚未实施，800-update 正式 baseline 尚未开始。迁移后仍缺失原 Git 历史和 500-task 正式 checkpoint，且根目录与历史 Phase 2.1c 总览存在文件错位；部分缺失源码仍可从 `.claude/worktrees` 快照恢复。
+> 已完成 WeCAN faithful reimplementation、论文参数配置、论文风格 500-task synthetic generator、独立 Validator 与双 Oracle 正确性基础设施，并完成 Generator topology cache 的语义等价加速。Phase 1.6 冻结数据、训练权重和核心验收产物已按 manifest 完整恢复；新的 Git 管理基线已建立并推送到私有远程仓库。当前论文规模训练仍受逐 rollout Generator 和逐实例 trainer 吞吐限制，第二轮 `_dispatch_mask` correctness-preserving short-circuit 尚未实施，800-update 正式 baseline 尚未开始。迁移后仍缺失原 Git 历史和 500-task 正式 checkpoint，且根目录与历史 Phase 2.1c 总览存在文件错位；部分缺失源码仍可从 `.claude/worktrees` 快照恢复。
 
 ## 12. 核心文件 SHA-256（迁移审计基线）
 
@@ -655,6 +655,6 @@ data/phase21c_master_generator.py
 
 ## 13. 审计结论
 
-新的版本控制基线已经初始化；下一步是完成远程推送并恢复可运行依赖环境。之后技术主线非常明确：继续第二轮 Generator 等价优化，复测论文规模吞吐，再决定是否进入正式 800-update baseline。
+新的版本控制基线已经初始化并推送到私有 GitHub 仓库；下一步是恢复可运行依赖环境。之后技术主线非常明确：继续第二轮 Generator 等价优化，复测论文规模吞吐，再决定是否进入正式 800-update baseline。
 
 这次迁移没有保留主 Git 历史和 500-task 正式 checkpoint，但核心 WeCAN/Generator/Oracle/诊断代码并未丢失，Phase 1.6 已完成精确恢复，Phase 2.1c 的大量缺失源码也仍藏在 worktree 快照中。因此项目可恢复，且当前研究停点可以被较精确地续接。
