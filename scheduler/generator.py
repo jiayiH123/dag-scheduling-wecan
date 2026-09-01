@@ -211,24 +211,36 @@ class SkipExtendedGenerator:
         placements_by_task = {} if placements_by_task is None else placements_by_task
         mask: list[bool] = []
         for task in range(instance.num_tasks):
+            if task not in unscheduled:
+                mask.extend([False] * instance.num_pools)
+                continue
+
             if topo is not None:
                 parents_done = topo.parents[task].issubset(completed)
             else:
                 parents_done = set(instance.parents[task]).issubset(completed)
+
+            if not parents_done:
+                mask.extend([False] * instance.num_pools)
+                continue
+
             for pool in range(instance.num_pools):
+                if instance.compatibility[task][pool] <= 0:
+                    mask.append(False)
+                    continue
+
                 capacity_ok = all(
                     instance.task_demands[task][dimension] <= available[pool][dimension] + EPS
                     for dimension in range(instance.resource_dims)
                 )
-                ready = parents_done and current_time + EPS >= cls._ready_time(
+                if not capacity_ok:
+                    mask.append(False)
+                    continue
+
+                ready = current_time + EPS >= cls._ready_time(
                     instance, task, pool, placements_by_task, topo=topo,
                 )
-                mask.append(
-                    task in unscheduled
-                    and ready
-                    and instance.compatibility[task][pool] > 0
-                    and capacity_ok
-                )
+                mask.append(ready)
         return mask
 
     @classmethod
