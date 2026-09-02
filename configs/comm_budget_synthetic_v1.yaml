@@ -1,0 +1,47 @@
+# Reproducible CommBudget-WeCAN V1 synthetic-data defaults.
+seed: 2026
+sanity_count: 300
+
+synthetic:
+  num_tasks: 30
+  num_pools: 3
+  topologies: [layered, erdos_renyi, stochastic_block]
+  d_size: 96.0
+  # Medium hard-budget setting chosen before training: 25% above the exact lower bound.
+  budget_alpha: 1.25
+
+  workload_median: 24.0
+  workload_log_sigma: 0.45
+  workload_min: 8.0
+  workload_max: 64.0
+
+  processor_demand_values: [1, 2, 4, 6, 8]
+  processor_demand_probabilities: [0.15, 0.25, 0.30, 0.20, 0.10]
+  memory_demand_values: [1, 2, 3, 4, 6]
+  memory_demand_probabilities: [0.15, 0.25, 0.30, 0.20, 0.10]
+
+  # Pool roles: economy, balanced-network, performance.
+  capacity_bases:
+    - [12.0, 12.0]
+    - [20.0, 16.0]
+    - [36.0, 24.0]
+  capacity_jitter_fraction: 0.10
+  frequency_ranges:
+    - [0.85, 1.00]
+    - [1.30, 1.55]
+    - [1.90, 2.25]
+  power_ranges:
+    - [0.80, 1.00]
+    - [1.30, 1.65]
+    - [2.20, 2.80]
+  unit_cost_ranges:
+    - [0.65, 0.85]
+    - [0.95, 1.20]
+    - [1.35, 1.75]
+
+  # Directed base bandwidth; each off-diagonal value receives ±15% jitter.
+  bandwidth_bases:
+    - [0.0, 24.0, 12.0]
+    - [18.0, 0.0, 30.0]
+    - [14.0, 22.0, 0.0]
+  bandwidth_jitter_fraction: 0.15
