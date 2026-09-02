@@ -35,6 +35,7 @@ class WeCANConfig:
     skip_hidden_dim: int = 64
     skip_parameterization: str = "softplus"
     minimum_skip_parameter: float = 1e-4
+    comm_budget_enabled: bool = False
     # Legacy aliases accepted so existing Phase-1 checkpoints/configs load correctly.
     hidden_dim: int | None = None
     heads: int | None = None
@@ -81,6 +82,43 @@ class InitialEmbedder(nn.Module):
 
     def forward(self, values: torch.Tensor) -> torch.Tensor:
         return self.layers(values)
+
+
+class PoolNetworkEncoder(nn.Module):
+    """One lightweight directed message-passing layer over the pool network.
+
+    For each directed source→target pair, log-bandwidth is embedded and added to
+    a projected source-pool message. Each target mean-aggregates its incoming
+    off-diagonal messages, followed by an output projection, residual connection,
+    and LayerNorm. DAG edges are deliberately not part of this encoder.
+    """
+
+    def __init__(self, hidden_dim: int) -> None:
+        super().__init__()
+        self.hidden_dim = hidden_dim
+        self.source_projection = nn.Linear(hidden_dim, hidden_dim, bias=False)
+        self.bandwidth_embedder = nn.Sequential(
+            nn.Linear(1, hidden_dim),
+            nn.GELU(),
+            nn.Linear(hidden_dim, hidden_dim),
+        )
+        self.output = nn.Linear(hidden_dim, hidden_dim, bias=False)
+        self.norm = nn.LayerNorm(hidden_dim)
+
+    def forward(self, pool_embeddings: torch.Tensor, bandwidth: torch.Tensor) -> torch.Tensor:
+        pool_count = pool_embeddings.shape[0]
+        if bandwidth.shape != (pool_count, pool_count):
+            raise ValueError("bandwidth must have shape [num_pools, num_pools].")
+        # Axis order is [source_pool, target_pool, hidden].
+        source_messages = self.source_projection(pool_embeddings).unsqueeze(1)
+        edge_messages = self.bandwidth_embedder(torch.log1p(bandwidth).unsqueeze(-1))
+        messages = torch.nn.functional.gelu(source_messages + edge_messages)
+        if pool_count == 1:
+            aggregated = torch.zeros_like(pool_embeddings)
+        else:
+            off_diagonal = ~torch.eye(pool_count, dtype=torch.bool, device=pool_embeddings.device)
+            aggregated = (messages * off_diagonal.unsqueeze(-1)).sum(dim=0) / float(pool_count - 1)
+        return self.norm(pool_embeddings + self.output(aggregated))
 
 
 class WeightedCrossAttention(nn.Module):
@@ -221,7 +259,9 @@ class WeCAN(nn.Module):
         self.resource_dims = resource_dims
         self.config = config
         self.task_embedder = InitialEmbedder(1 + resource_dims, config.high_dim)
-        self.pool_embedder = InitialEmbedder(resource_dims, config.high_dim)
+        pool_input_dim = resource_dims + 4 if config.comm_budget_enabled else resource_dims
+        self.pool_embedder = InitialEmbedder(pool_input_dim, config.high_dim)
+        self.pool_network_encoder = PoolNetworkEncoder(config.high_dim) if config.comm_budget_enabled else None
         self.initial_weca = WeightedCrossAttention(config.high_dim, config.weca_heads)
         self.ldd_layers = nn.ModuleList(
             LDDGraphAttention(config.high_dim, config.ldd_heads, config.dmax) for _ in range(config.ldd_layers)
@@ -250,17 +290,29 @@ class WeCAN(nn.Module):
 
     def forward(self, instance: DAGInstance) -> WeCANOutput:
         self.forward_calls += 1
+        if instance.comm_budget_enabled != self.config.comm_budget_enabled:
+            raise ValueError(
+                "CommBudget mode must be enabled consistently in both WeCANConfig and DAGInstance."
+            )
         parameter = next(self.parameters())
         device, dtype = parameter.device, parameter.dtype
+        task_scalar = instance.task_workloads if instance.comm_budget_enabled else instance.task_durations
+        assert task_scalar is not None
         task_features = torch.tensor(
-            [[instance.task_durations[task], *instance.task_demands[task]] for task in range(instance.num_tasks)],
+            [[task_scalar[task], *instance.task_demands[task]] for task in range(instance.num_tasks)],
             dtype=dtype,
             device=device,
         )
-        pool_features = torch.tensor(instance.pool_capacities, dtype=dtype, device=device)
+        pool_features = torch.tensor(
+            [instance.pool_features(pool) for pool in range(instance.num_pools)], dtype=dtype, device=device
+        )
         compatibility = torch.tensor(instance.compatibility, dtype=dtype, device=device)
         task_embeddings = self.task_embedder(task_features)
         pool_embeddings = self.pool_embedder(pool_features)
+        if self.pool_network_encoder is not None:
+            assert instance.bandwidth is not None
+            bandwidth = torch.tensor(instance.bandwidth, dtype=dtype, device=device)
+            pool_embeddings = self.pool_network_encoder(pool_embeddings, bandwidth)
         task_embeddings = self.initial_weca(task_embeddings, pool_embeddings, compatibility)
         distances = ldd_distances(instance, device)
         for layer in self.ldd_layers:

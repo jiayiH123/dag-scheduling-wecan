@@ -43,7 +43,7 @@ class ValidationResult:
 
 
 def validate_schedule(instance: DAGInstance, schedule: Schedule) -> ValidationResult:
-    """Validate all Phase-1 WeCAN constraints independently of any generator."""
+    """Validate core schedule constraints independently of any generator."""
     violations: list[str] = []
     placements = {placement.task: placement for placement in schedule.placements}
     if len(placements) != instance.num_tasks or set(placements) != set(range(instance.num_tasks)):
@@ -64,7 +64,13 @@ def validate_schedule(instance: DAGInstance, schedule: Schedule) -> ValidationRe
 
     for source, destination in instance.edges:
         if source in placements and destination in placements:
-            if placements[source].end > placements[destination].start + EPS:
+            communication_delay = instance.communication_delay_ticks(
+                source,
+                destination,
+                placements[source].pool,
+                placements[destination].pool,
+            )
+            if placements[source].end + communication_delay > placements[destination].start + EPS:
                 violations.append(f"Dependency {source}->{destination} is violated.")
 
     event_times = sorted({
@@ -88,4 +94,13 @@ def validate_schedule(instance: DAGInstance, schedule: Schedule) -> ValidationRe
                     violations.append(
                         f"Pool {pool} exceeds capacity in dimension {dimension} during ({left}, {right})."
                     )
+    if instance.comm_budget_enabled:
+        assert instance.budget is not None
+        total_cost = sum(
+            instance.task_pool_cost(task, placement.pool)
+            for task, placement in placements.items()
+            if 0 <= placement.pool < instance.num_pools
+        )
+        if total_cost > instance.budget + EPS:
+            violations.append(f"Schedule cost {total_cost} exceeds budget {instance.budget}.")
     return ValidationResult(not violations, tuple(violations))

@@ -1,4 +1,4 @@
-"""Independent event-timeline schedule validator for Phase 1.5 and Phase 2.1a.
+"""Independent event-timeline validator for legacy and CommBudget schedules.
 
 This module intentionally does not call the scheduling generator, heuristic logic, or
 Oracle solvers. It validates only the concrete schedule (and optionally an action trace).
@@ -32,11 +32,14 @@ class ScheduleValidationResult:
     trace_checked: bool
     communication_checked: bool = False
     cross_pool_edge_count: int = 0
-    total_communication_delay: int = 0
+    total_communication_delay: float = 0
     passive_communication_advance_count: int = 0
+    budget_checked: bool = False
+    total_cost: float = 0.0
+    budget: float | None = None
 
     def to_dict(self) -> dict[str, Any]:
-        return {
+        payload = {
             "feasible": self.feasible,
             "violations": list(self.violations),
             "interval_usages": [asdict(usage) for usage in self.interval_usages],
@@ -46,6 +49,13 @@ class ScheduleValidationResult:
             "total_communication_delay": self.total_communication_delay,
             "passive_communication_advance_count": self.passive_communication_advance_count,
         }
+        if self.budget_checked:
+            payload.update(
+                budget_checked=True,
+                total_cost=self.total_cost,
+                budget=self.budget,
+            )
+        return payload
 
 
 def validate_schedule(
@@ -102,6 +112,7 @@ def validate_schedule(
         instance, placements_by_task, violations, eps,
     )
     interval_usages = _validate_capacity(instance, tuple(placements_by_task.values()), violations, eps)
+    total_cost = _validate_budget(instance, placements_by_task, violations, eps)
     expected_makespan = max((placement.end for placement in placements_by_task.values()), default=0.0)
     if abs(schedule.makespan - expected_makespan) > eps:
         violations.append(f"Schedule makespan {schedule.makespan} differs from maximum completion {expected_makespan}.")
@@ -119,6 +130,9 @@ def validate_schedule(
         cross_pool_edge_count=cross_pool_edge_count,
         total_communication_delay=total_communication_delay,
         passive_communication_advance_count=passive_communication_advances,
+        budget_checked=instance.comm_budget_enabled,
+        total_cost=total_cost,
+        budget=instance.budget,
     )
 
 
@@ -127,7 +141,7 @@ def _validate_precedence_and_communication(
     placements_by_task: dict[int, TaskPlacement],
     violations: list[str],
     eps: float,
-) -> tuple[int, int]:
+) -> tuple[int, float]:
     cross_pool_edge_count = 0
     total_communication_delay = 0
     for parent, child in instance.edges:
@@ -179,6 +193,25 @@ def _validate_capacity(
     return usages
 
 
+def _validate_budget(
+    instance: DAGInstance,
+    placements_by_task: dict[int, TaskPlacement],
+    violations: list[str],
+    eps: float,
+) -> float:
+    if not instance.comm_budget_enabled:
+        return 0.0
+    assert instance.budget is not None
+    total_cost = 0.0
+    for task, placement in placements_by_task.items():
+        if not (0 <= task < instance.num_tasks and 0 <= placement.pool < instance.num_pools):
+            continue
+        total_cost += instance.task_pool_cost(task, placement.pool)
+    if total_cost > instance.budget + eps:
+        violations.append(f"Schedule cost {total_cost} exceeds budget {instance.budget}.")
+    return total_cost
+
+
 def _ready_time(instance: DAGInstance, task: int, pool: int, placements: dict[int, TaskPlacement]) -> float:
     return max(
         (
@@ -198,8 +231,10 @@ def _dispatch_mask(
     placements: dict[int, TaskPlacement],
     current_time: float,
     eps: float,
+    spent_budget: float = 0.0,
 ) -> list[bool]:
     mask: list[bool] = []
+    remaining_lower_bound = instance.minimum_cost_lower_bound(unscheduled)
     for task in range(instance.num_tasks):
         parents_done = set(instance.parents[task]).issubset(completed)
         for pool in range(instance.num_pools):
@@ -208,8 +243,29 @@ def _dispatch_mask(
                 for dimension in range(instance.resource_dims)
             )
             ready = parents_done and current_time + eps >= _ready_time(instance, task, pool, placements)
-            mask.append(task in unscheduled and ready and instance.compatibility[task][pool] > 0 and capacity_ok)
+            budget_ok = _budget_action_feasible(
+                instance, task, pool, spent_budget, remaining_lower_bound, eps,
+            )
+            mask.append(task in unscheduled and ready and instance.compatibility[task][pool] > 0 and capacity_ok and budget_ok)
     return mask
+
+
+def _budget_action_feasible(
+    instance: DAGInstance,
+    task: int,
+    pool: int,
+    spent_budget: float,
+    remaining_lower_bound: float,
+    eps: float,
+) -> bool:
+    if not instance.comm_budget_enabled:
+        return True
+    assert instance.budget is not None
+    action_cost = instance.task_pool_cost(task, pool)
+    if action_cost > instance.budget - spent_budget + eps:
+        return False
+    future_lower_bound = remaining_lower_bound - instance.minimum_task_cost(task)
+    return spent_budget + action_cost + future_lower_bound <= instance.budget + eps
 
 
 def _next_event(
@@ -258,8 +314,9 @@ def _validate_trace(
     available = [list(capacity) for capacity in instance.pool_capacities]
     dispatches = 0
     passive_communication_advances = 0
+    spent_budget = 0.0
     for index, event in enumerate(trace):
-        mask = _dispatch_mask(instance, unscheduled, completed, available, placements, current_time, eps)
+        mask = _dispatch_mask(instance, unscheduled, completed, available, placements, current_time, eps, spent_budget)
         feasible_dispatch = any(mask)
         if event == "skip":
             next_time, reason = _next_event(instance, unscheduled, completed, running, placements, current_time, eps)
@@ -310,6 +367,13 @@ def _validate_trace(
         if not 0 <= pool < instance.num_pools or instance.compatibility[task][pool] <= 0:
             violations.append(f"Trace event {index} dispatches task {task} to an invalid/incompatible pool.")
             continue
+        if instance.comm_budget_enabled:
+            remaining_lower_bound = instance.minimum_cost_lower_bound(unscheduled)
+            if not _budget_action_feasible(
+                instance, task, pool, spent_budget, remaining_lower_bound, eps,
+            ):
+                violations.append(f"Trace event {index} violates the budget or remaining-task lower bound.")
+            spent_budget += instance.task_pool_cost(task, pool)
         for dimension, demand in enumerate(instance.task_demands[task]):
             if demand > available[pool][dimension] + eps:
                 violations.append(f"Trace event {index} exceeds pool {pool} capacity for task {task}.")

@@ -1,0 +1,26 @@
+# CommBudget-WeCAN V1 architecture configuration.
+# Instances must additionally provide task_workloads, pool_frequencies,
+# pool_powers, pool_costs, bandwidth, d_size, and budget.
+seed: 2026
+
+model:
+  profile: paper
+  high_dim: 512
+  low_dim: 128
+  weca_heads: 8
+  ldd_heads: 16
+  ldd_layers: 8
+  alternating_weca_layers: 2
+  dmax: 500
+  skip_hidden_dim: 64
+  skip_parameterization: paper_sigmoid
+  minimum_skip_parameter: 0.0001
+  comm_budget_enabled: true
+
+# V1 changes instance generation and model inputs only. Training is intentionally
+# absent: this file is not a request to start or alter REINFORCE.
+comm_budget_v1:
+  task_input: [workload, resource_demand]
+  pool_input: [capacity, frequency, power, cost, unit_cost]
+  communication: global_d_size_divided_by_directed_bandwidth
+  budget_constraint: hard_mask_with_remaining_task_lower_bound

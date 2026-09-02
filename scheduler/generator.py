@@ -27,6 +27,8 @@ class DecodeTrace:
     forward_calls: int = 0
     passive_communication_advance_count: int = 0
     time_advance_reasons: tuple[str, ...] = ()
+    spent_budget: float = 0.0
+    remaining_budget: float | None = None
 
 
 def skip_log_score(skip_parameters: torch.Tensor, decision_count: int, num_tasks: int) -> torch.Tensor:
@@ -96,11 +98,12 @@ class SkipExtendedGenerator:
         passive_communication_advance_count = 0
         time_advance_reasons: list[str] = []
         decision_count = 0
+        spent_budget = 0.0
 
         while unscheduled:
             mask = self._dispatch_mask(
                 instance, unscheduled, completed, available, placements_by_task, current_time,
-                topo=topo,
+                topo=topo, spent_budget=spent_budget,
             )
             flat_scores = task_pool_scores.reshape(-1)
             mask_tensor = torch.tensor(mask, device=device, dtype=torch.bool)
@@ -113,6 +116,10 @@ class SkipExtendedGenerator:
             passive_time_advance_available = next_time is not None and not feasible_dispatch
             skip_available = active_wait_available or passive_time_advance_available
             if not feasible_dispatch and not skip_available:
+                if instance.comm_budget_enabled:
+                    raise RuntimeError(
+                        "No action can satisfy the CommBudget hard constraint; the remaining instance is budget-infeasible."
+                    )
                 raise RuntimeError("No feasible dispatch and no completion or communication-release event: input instance is invalid.")
 
             skip_score = skip_log_score(skip_parameters, decision_count, instance.num_tasks)
@@ -159,6 +166,7 @@ class SkipExtendedGenerator:
                 unscheduled.remove(task)
                 for dimension, demand in enumerate(instance.task_demands[task]):
                     available[pool][dimension] -= demand
+                spent_budget += instance.task_pool_cost(task, pool)
                 decisions.append(f"dispatch:{task}:{pool}")
             decision_count += 1
             if decision_count > max_decode_actions(instance):
@@ -177,6 +185,8 @@ class SkipExtendedGenerator:
             action_count=decision_count,
             passive_communication_advance_count=passive_communication_advance_count,
             time_advance_reasons=tuple(time_advance_reasons),
+            spent_budget=spent_budget,
+            remaining_budget=None if instance.budget is None else instance.budget - spent_budget,
         )
 
     @staticmethod
@@ -207,9 +217,11 @@ class SkipExtendedGenerator:
         placements_by_task: dict[int, TaskPlacement] | None = None,
         current_time: float = 0.0,
         topo: _TopologyCache | None = None,
+        spent_budget: float = 0.0,
     ) -> list[bool]:
         placements_by_task = {} if placements_by_task is None else placements_by_task
         mask: list[bool] = []
+        remaining_lower_bound = instance.minimum_cost_lower_bound(unscheduled)
         for task in range(instance.num_tasks):
             if task not in unscheduled:
                 mask.extend([False] * instance.num_pools)
@@ -237,11 +249,39 @@ class SkipExtendedGenerator:
                     mask.append(False)
                     continue
 
+                if not cls._budget_action_feasible(
+                    instance,
+                    task,
+                    pool,
+                    spent_budget,
+                    remaining_lower_bound,
+                ):
+                    mask.append(False)
+                    continue
+
                 ready = current_time + EPS >= cls._ready_time(
                     instance, task, pool, placements_by_task, topo=topo,
                 )
                 mask.append(ready)
         return mask
+
+    @staticmethod
+    def _budget_action_feasible(
+        instance: DAGInstance,
+        task: int,
+        pool: int,
+        spent_budget: float,
+        remaining_lower_bound: float,
+    ) -> bool:
+        if not instance.comm_budget_enabled:
+            return True
+        assert instance.budget is not None
+        action_cost = instance.task_pool_cost(task, pool)
+        remaining_budget = instance.budget - spent_budget
+        if action_cost > remaining_budget + EPS:
+            return False
+        future_lower_bound = remaining_lower_bound - instance.minimum_task_cost(task)
+        return spent_budget + action_cost + future_lower_bound <= instance.budget + EPS
 
     @classmethod
     def _next_event(

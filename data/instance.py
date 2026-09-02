@@ -26,9 +26,9 @@ class EdgeCommunication:
 class DAGInstance:
     """Offline heterogeneous-DAG instance using the notation of the WeCAN paper.
 
-    Communication is optional. A missing communication section deliberately retains the
-    Phase-1 zero-delay semantics. When enabled, edge records and directed network
-    matrices use strict integer-tick semantics validated by :meth:`validate`.
+    Communication is optional. A missing communication section deliberately retains
+    Phase-1 zero-delay semantics. Legacy edge communication keeps strict integer ticks;
+    CommBudget V1 instead uses one global d_size and a directed bandwidth matrix.
     """
 
     name: str
@@ -38,8 +38,16 @@ class DAGInstance:
     compatibility: tuple[tuple[float, ...], ...]
     edges: tuple[tuple[int, int], ...]
     edge_communications: tuple[EdgeCommunication, ...] = ()
-    bandwidth: tuple[tuple[int, ...], ...] | None = None
+    bandwidth: tuple[tuple[float, ...], ...] | None = None
     latency_ticks: tuple[tuple[int, ...], ...] | None = None
+    # Optional CommBudget-WeCAN V1 fields. Keeping them at the end preserves every
+    # existing positional DAGInstance construction and serialized Phase-1 payload.
+    task_workloads: tuple[float, ...] | None = None
+    pool_frequencies: tuple[float, ...] | None = None
+    pool_powers: tuple[float, ...] | None = None
+    pool_costs: tuple[float, ...] | None = None
+    d_size: float | None = None
+    budget: float | None = None
 
     @property
     def num_tasks(self) -> int:
@@ -55,7 +63,25 @@ class DAGInstance:
 
     @property
     def communication_enabled(self) -> bool:
-        return self.bandwidth is not None or self.latency_ticks is not None or bool(self.edge_communications)
+        return self.comm_budget_enabled or self.legacy_communication_enabled
+
+    @property
+    def comm_budget_enabled(self) -> bool:
+        return any(
+            value is not None
+            for value in (
+                self.task_workloads,
+                self.pool_frequencies,
+                self.pool_powers,
+                self.pool_costs,
+                self.d_size,
+                self.budget,
+            )
+        )
+
+    @property
+    def legacy_communication_enabled(self) -> bool:
+        return bool(self.edge_communications) or self.latency_ticks is not None
 
     @property
     def parents(self) -> tuple[tuple[int, ...], ...]:
@@ -75,26 +101,42 @@ class DAGInstance:
     def edge_communication_by_edge(self) -> dict[tuple[int, int], EdgeCommunication]:
         return {(record.source, record.target): record for record in self.edge_communications}
 
-    def edge_data_size(self, source: int, target: int) -> int:
+    def edge_data_size(self, source: int, target: int) -> float:
         if not self.communication_enabled:
-            return 0
+            return 0.0
+        if self.comm_budget_enabled:
+            assert self.d_size is not None
+            return self.d_size
         try:
             return self.edge_communication_by_edge[source, target].data_size
         except KeyError as error:
             raise ValueError(f"No communication record exists for edge {source}->{target}.") from error
 
     def actual_duration(self, task: int, pool: int) -> float:
+        if self.comm_budget_enabled:
+            assert self.task_workloads is not None and self.pool_frequencies is not None
+            return self.task_workloads[task] / self.pool_frequencies[pool]
         coefficient = self.compatibility[task][pool]
         if coefficient <= 0:
             raise ValueError(f"Task {task} is incompatible with pool {pool}.")
         return self.task_durations[task] / coefficient
 
-    def communication_delay_ticks(self, source: int, target: int, source_pool: int, target_pool: int) -> int:
-        """Return the exact non-competitive child-release delay in integer ticks."""
+    def communication_delay_ticks(self, source: int, target: int, source_pool: int, target_pool: int) -> float:
+        """Return the non-competitive child-release delay.
+
+        The historical method name is retained for compatibility. Legacy Phase-2
+        instances still return their exact integer-tick latency. CommBudget V1 uses
+        the requested floating-point ``d_size / bandwidth[source_pool][target_pool]``.
+        """
         if source_pool == target_pool or not self.communication_enabled:
-            return 0
-        if self.bandwidth is None or self.latency_ticks is None:
+            return 0.0
+        if self.bandwidth is None:
             raise ValueError("Communication fields are incomplete.")
+        if self.comm_budget_enabled:
+            assert self.d_size is not None
+            return self.d_size / self.bandwidth[source_pool][target_pool]
+        if self.latency_ticks is None:
+            raise ValueError("Legacy communication fields are incomplete.")
         data_size = self.edge_data_size(source, target)
         bandwidth = self.bandwidth[source_pool][target_pool]
         if data_size % bandwidth:
@@ -102,6 +144,47 @@ class DAGInstance:
                 f"Communication {source}->{target} is not integral on pool direction {source_pool}->{target_pool}."
             )
         return self.latency_ticks[source_pool][target_pool] + data_size // bandwidth
+
+    @property
+    def pool_unit_costs(self) -> tuple[float, ...]:
+        if not self.comm_budget_enabled:
+            raise ValueError("Pool unit costs are only defined for CommBudget V1 instances.")
+        assert self.pool_frequencies is not None and self.pool_powers is not None and self.pool_costs is not None
+        return tuple(
+            self.pool_powers[pool] * self.pool_costs[pool] / self.pool_frequencies[pool]
+            for pool in range(self.num_pools)
+        )
+
+    def pool_features(self, pool: int) -> tuple[float, ...]:
+        """Return the model input for a pool in the active instance mode."""
+        if not self.comm_budget_enabled:
+            return self.pool_capacities[pool]
+        assert self.pool_frequencies is not None and self.pool_powers is not None and self.pool_costs is not None
+        return (
+            *self.pool_capacities[pool],
+            self.pool_frequencies[pool],
+            self.pool_powers[pool],
+            self.pool_costs[pool],
+            self.pool_unit_costs[pool],
+        )
+
+    def task_pool_cost(self, task: int, pool: int) -> float:
+        if not self.comm_budget_enabled:
+            return 0.0
+        assert self.pool_powers is not None and self.pool_costs is not None
+        return self.actual_duration(task, pool) * self.pool_powers[pool] * self.pool_costs[pool]
+
+    def minimum_task_cost(self, task: int) -> float:
+        if not self.comm_budget_enabled:
+            return 0.0
+        # This follows the V1 definition min_i cost(v, i). Compatibility and
+        # capacity remain independent action-mask constraints.
+        return min(self.task_pool_cost(task, pool) for pool in range(self.num_pools))
+
+    def minimum_cost_lower_bound(self, tasks: Iterable[int]) -> float:
+        if not self.comm_budget_enabled:
+            return 0.0
+        return sum(self.minimum_task_cost(task) for task in tasks)
 
     def topological_order(self) -> tuple[int, ...]:
         indegree = [0] * self.num_tasks
@@ -152,7 +235,59 @@ class DAGInstance:
                 raise ValueError("Edges must be unique non-self loops.")
             seen.add((source, destination))
         self.topological_order()
-        self._validate_communication(seen)
+        if self.comm_budget_enabled:
+            self._validate_comm_budget()
+        else:
+            self._validate_communication(seen)
+
+    def _validate_comm_budget(self) -> None:
+        required = {
+            "task_workloads": self.task_workloads,
+            "pool_frequencies": self.pool_frequencies,
+            "pool_powers": self.pool_powers,
+            "pool_costs": self.pool_costs,
+            "bandwidth": self.bandwidth,
+            "d_size": self.d_size,
+            "budget": self.budget,
+        }
+        missing = sorted(name for name, value in required.items() if value is None)
+        if missing:
+            raise ValueError(f"CommBudget V1 fields must be all present; missing {missing}.")
+        if self.edge_communications or self.latency_ticks is not None:
+            raise ValueError("CommBudget V1 uses global d_size and cannot be mixed with legacy edge communication fields.")
+        assert self.task_workloads is not None
+        assert self.pool_frequencies is not None and self.pool_powers is not None and self.pool_costs is not None
+        assert self.bandwidth is not None and self.d_size is not None and self.budget is not None
+        if len(self.task_workloads) != self.num_tasks:
+            raise ValueError("task_workloads must have one value per task.")
+        if any(not math.isfinite(value) or value <= 0 for value in self.task_workloads):
+            raise ValueError("Every workload must be finite and positive.")
+        for name, values in (
+            ("pool_frequencies", self.pool_frequencies),
+            ("pool_powers", self.pool_powers),
+            ("pool_costs", self.pool_costs),
+        ):
+            if len(values) != self.num_pools:
+                raise ValueError(f"{name} must have one value per pool.")
+            if any(not math.isfinite(value) or value <= 0 for value in values):
+                raise ValueError(f"Every {name} value must be finite and positive.")
+        if not math.isfinite(self.d_size) or self.d_size < 0:
+            raise ValueError("d_size must be finite and non-negative.")
+        if not math.isfinite(self.budget) or self.budget < 0:
+            raise ValueError("budget must be finite and non-negative.")
+        if len(self.bandwidth) != self.num_pools:
+            raise ValueError("bandwidth must be square [num_pools, num_pools].")
+        for source_pool, row in enumerate(self.bandwidth):
+            if len(row) != self.num_pools:
+                raise ValueError("bandwidth must be square [num_pools, num_pools].")
+            for target_pool, value in enumerate(row):
+                if not math.isfinite(value):
+                    raise ValueError("Every bandwidth value must be finite.")
+                if source_pool == target_pool:
+                    if value < 0:
+                        raise ValueError("Diagonal bandwidth values must be non-negative.")
+                elif value <= 0:
+                    raise ValueError("Cross-pool bandwidth values must be positive.")
 
     def _validate_communication(self, edge_set: set[tuple[int, int]]) -> None:
         if not self.communication_enabled:
@@ -207,10 +342,16 @@ class DAGInstance:
         payload = asdict(self)
         # Preserve Phase-1 serialized payloads exactly: zero-communication defaults are
         # semantic defaults, not fields retrofitted into frozen Phase-1 artifacts.
-        if not self.communication_enabled:
+        if self.comm_budget_enabled:
+            payload.pop("edge_communications", None)
+            payload.pop("latency_ticks", None)
+        elif not self.communication_enabled:
             payload.pop("edge_communications", None)
             payload.pop("bandwidth", None)
             payload.pop("latency_ticks", None)
+        if not self.comm_budget_enabled:
+            for field in ("task_workloads", "pool_frequencies", "pool_powers", "pool_costs", "d_size", "budget"):
+                payload.pop(field, None)
         return payload
 
     @classmethod
@@ -229,6 +370,12 @@ class DAGInstance:
             ),
             bandwidth=None if payload.get("bandwidth") is None else tuple(tuple(value for value in row) for row in payload["bandwidth"]),
             latency_ticks=None if payload.get("latency_ticks") is None else tuple(tuple(value for value in row) for row in payload["latency_ticks"]),
+            task_workloads=None if payload.get("task_workloads") is None else tuple(float(value) for value in payload["task_workloads"]),
+            pool_frequencies=None if payload.get("pool_frequencies") is None else tuple(float(value) for value in payload["pool_frequencies"]),
+            pool_powers=None if payload.get("pool_powers") is None else tuple(float(value) for value in payload["pool_powers"]),
+            pool_costs=None if payload.get("pool_costs") is None else tuple(float(value) for value in payload["pool_costs"]),
+            d_size=None if payload.get("d_size") is None else float(payload["d_size"]),
+            budget=None if payload.get("budget") is None else float(payload["budget"]),
         )
         instance.validate()
         return instance
